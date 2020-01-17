@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.ti {
+	text-align:right;
+}
+#register{
+	align:center;
+}
+#button { 
+	text-align:right;
+	width:25%; 
+	}
