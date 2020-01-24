@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id = "app">
+      <child-component v-bind:apple="pie"></child-component>
+    </div>
+  </body>
+  <script src = 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js'></script>
+  <script>
+    Vue.component('child-component',{
+      template : '<h1>{{apple}}</h1>',
+      props : ['apple']
+    });
+    new Vue({
+      el : '#app',
+      data : {
+        pie : "사과는 파이도 맛있습니다."
+      }
+    });
+  </script>
+</html>
