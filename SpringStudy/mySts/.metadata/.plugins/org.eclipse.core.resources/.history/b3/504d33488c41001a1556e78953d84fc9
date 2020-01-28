@@ -1,0 +1,5 @@
+package springJDBC;
+
+public class GuestMessage {
+
+}

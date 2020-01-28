@@ -1,0 +1,27 @@
+package chris.spring.web.common;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Service;
+
+@Service//빈객체를 설정하는 어노테이션
+@Aspect	//pointcut + advisor 즉 특정 메서드들을 호출하는 pointcut을 설정하고
+		//해당 관심기능들을 실행할 시점을 정하는 advisor를 설정해야한다.
+public class BeforeAdvice {
+
+	@Pointcut("execution(* chris.spring.web..*Impl.*(..))")
+	public void allPointcut() {
+		//아무것도 없는 공간의 메서드를 선언해야 한다. 
+	}
+	
+	//advisor annotation이다. 안에 어떤 pointcut을 사용할지 지정해야 한다.
+	@Before("allPointcut()")
+	public void beforeLog(JoinPoint joinpoint) {
+		String method = joinpoint.getSignature().getName();
+		Object[] args = joinpoint.getArgs();
+		System.out.println("[사전처리] : " + method + "() 메서드의 ARGS 정보 : " + args[0].toString());
+	}
+	
+}

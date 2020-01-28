@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=myboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;chris.spring.polymorphism{Speaker.java[Speaker" modifiers="513" timestamp="1579499001280"/>
+<typeInfo handle="=myboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;chris.spring.web.user{UserService.java[UserService" modifiers="513" timestamp="1579524699338"/>
+<typeInfo handle="=myboard/C:\/Program Files\/Java\/jre1.8.0_241\/lib\/rt.jar=/owner.project.facets=/java=/=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView" modifiers="1537" timestamp="1579448491204"/>
+<typeInfo handle="=myboard/C:\/Users\/chris\/.m2\/repository\/org\/springframework\/spring-jdbc\/5.2.3.RELEASE\/spring-jdbc-5.2.3.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-jdbc-5.2.3.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-jdbc=/=/maven.version=/5.2.3.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1579742401099"/>
+<typeInfo handle="=SpringJDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;chris.spring.guestbook.dao{GuestMessageDao.java[GuestMessageDao" modifiers="513" timestamp="1580175172064"/>
+</typeInfoHistroy>

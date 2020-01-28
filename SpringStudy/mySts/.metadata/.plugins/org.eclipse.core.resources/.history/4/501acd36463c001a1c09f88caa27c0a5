@@ -1,0 +1,9 @@
+package chris.spring.web.common;
+
+public class AroundAdvice {
+
+	public Object aroundLog(ProcessingJoinPoint joinpoint) throws Throwable{
+		
+	}
+	
+}

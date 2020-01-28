@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id = "ArticleDAO" class= "chris.spring.board.dao.OracleArticleDAO"></bean>
+	<bean id = "writeArticleService" class = "chris.spring.board.service.WriteArticleServiceImpl">
+		<constructor-arg><ref bean="ArticleDAO"/></constructor-arg>
+	</bean>
+	<bean id = "memberService" class = "chris.spring.member.service.MemberServiceImpl"></bean>
+	<bean id = "PerformanceTraceAdvice" class = "chris.spring.common.ProfilingAdvice"></bean>
+	<bean id = "readArticleService" class = "chris.spring.board.service.ReadArticleServiceImp"></bean>
+	
+	
+	<aop:config>
+		<aop:aspect id = "traceAspect1" ref = "PerformanceTraceAdvice">
+			<aop:pointcut expression="execution(* chris.spring.board..*(..))" id="publicMethod"/>
+				<aop:around pointcut-ref="publicMethod" method="trace"/>
+		</aop:aspect>
+		<aop:aspect id = "traceAspect2" ref = "PerformanceTraceAdvice">
+			<aop:around method = "trace" pointcut="execution(public * chris.spring.member.service..*(..))"/>
+		</aop:aspect>
+	</aop:config>
+</beans>

@@ -1,0 +1,18 @@
+package chris.spring.guestbook.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import chris.spring.guestbook.vo.GuestMessage;
+
+public class GuestMessageRowMapper implements RowMapper<GuestMessage> {
+
+	@Override
+	public GuestMessage mapRow(ResultSet rs, int rowNum) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

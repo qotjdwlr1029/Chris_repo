@@ -1,0 +1,15 @@
+package chris.spring.board.controller;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainTwo {
+
+	public static void main(String[] args) {
+		//기본위치라서 경로를 안씀
+		String[] configLocations = new String[] {"applicationContext.xml"};
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext(configLocations);
+		ReadArticleSercive readArticleService = ()
+	}
+
+}

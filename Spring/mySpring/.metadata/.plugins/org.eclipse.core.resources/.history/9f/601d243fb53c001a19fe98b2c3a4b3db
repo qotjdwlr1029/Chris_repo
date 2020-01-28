@@ -1,0 +1,19 @@
+package chris.spring.board.dao;
+
+import chris.spring.board.vo.ArticleVO;
+
+public class OracleArticleDAO implements ArticleDAO {
+
+	@Override
+	public void insert(ArticleVO article) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateReadCount(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+<context:component-scan base-package="chris.spring.web"></context:component-scan>
+<bean id = "log" class = "chris.spring.web.common.LogAdvice"></bean>
+	<aop:config>
+		<aop:pointcut expression="execution(* chris.spring.web..*Impl.*(..))" id = "allPointcut"/>
+		<aop:aspect ref = "log">
+			<aop:before method = "pringLog" pointcut-ref="allPointcut"/>
+		</aop:aspect>	
+	</aop:config>
+<!-- <bean id = "userService" class = "chris.spring.web.user.impl.UserServiceImpl">
+	<property name = "userDAO" ref = "userDAO"/>
+</bean>
+<bean id = "userDAO" class = "chris.spring.web.user.impl.UserDAO"/>
+<bean id = "tv" class="chris.spring.polymorphism.SamsungTV" lazy-init = "true">
+		<constructor-arg ref = "apple"></constructor-arg>
+		<constructor-arg value = "2800000"></constructor-arg>
+	</bean>
+	<bean id = "tv1" class = "chris.spring.polymorphism.LgTV" p:price = "2800000" p:speaker-ref="apple" lazy-init = "true"/>
+	<bean id = "sony" class = "chris.spring.polymorphism.SonySpeaker" lazy-init = "true"></bean>
+	<bean id = "apple" class = "chris.spring.polymorphism.AppleSpeaker" lazy-init = "true"></bean> -->
+
+</beans>

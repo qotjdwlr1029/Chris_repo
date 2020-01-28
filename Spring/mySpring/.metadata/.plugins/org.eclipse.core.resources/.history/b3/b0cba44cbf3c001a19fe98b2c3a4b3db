@@ -1,0 +1,29 @@
+package chris.spring.common;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+import chris.spring.board.vo.ArticleVO;
+
+public class ArticleCacheAdvice {
+
+	//해당 클래스의 멤버
+	private Map<Integer, ArticleVO> cache = new HashMap<Integer, ArticleVO>();
+	
+	public ArticleVO cache(ProceedingJoinPoint joinpoint) throws Throwable{
+		Integer id = (Integer)joinpoint.getArgs()[0];
+		ArticleVO article = cache.get(id);
+		if(article != null) {
+			
+		}
+		ArticleVO ret = (ArticleVO) joinpoint.proceed();
+		if(ret != null) {
+			cache.put(id, ret);
+			System.out.println("[ACA] 캐시에 Article[" + id+ "] 추가함");
+		}
+		return ret;
+	}
+	
+}

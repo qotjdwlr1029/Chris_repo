@@ -1,0 +1,20 @@
+package chris.spring.member.service;
+
+import chris.spring.member.vo.MemberVO;
+import chris.spring.member.vo.UpdateInfo;
+
+public class MemberServiceImpl implements MemberService {
+
+	@Override
+	public void regist(MemberVO member) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean update(String memberId, UpdateInfo info) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,49 @@
+package chris.spring.guestbook.dao;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import chris.spring.guestbook.vo.GuestMessage;
+
+public class NamedParamGuestMessageDao implements GuestMessageDao {
+	
+	private NamedParameterJdbcTemplate template;
+
+	public void setTemplate(NamedParameterJdbcTemplate template) {
+		this.template = template;
+	}
+
+	@Override
+	public int count() {
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		return template.queryForObject("select count(*) from guestbook",paramMap,Integer.class);
+	}
+
+	@Override
+	public List<GuestMessage> select(int begin, int end) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(GuestMessage message) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(GuestMessage message) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

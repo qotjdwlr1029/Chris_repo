@@ -1,0 +1,5 @@
+package chris.spring.board.vo;
+
+public class AriticleNotFoundException extends Exception {
+
+}

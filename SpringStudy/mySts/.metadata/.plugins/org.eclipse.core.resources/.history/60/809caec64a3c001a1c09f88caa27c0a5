@@ -1,0 +1,13 @@
+package chris.spring.web.common;
+
+import org.aspectj.lang.JoinPoint;
+
+public class BeforeAdvice {
+
+	public void beforeLog(JoinPoint joinpoint) {
+		String method = joinpoint.getSignature().getName();
+		Object[] args = joinpoint.getArgs();
+		System.out.println("[사전처리] : " + method + "() 메서드의 ARGS 정보 : " + args[0].toString());
+	}
+	
+}

@@ -1,0 +1,11 @@
+package chris.spring.guestbook.vo;
+
+public class GuestMessageList {
+
+	private int totalCount;
+	private int pageNum;
+	private int begin;
+	private int end;
+	private List<GuestMessage> messages;
+	
+}

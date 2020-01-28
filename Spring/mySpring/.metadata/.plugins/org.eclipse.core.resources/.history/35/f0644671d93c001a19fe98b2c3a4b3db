@@ -1,0 +1,13 @@
+package chris.spring.common;
+
+import org.springframework.core.Ordered;
+
+public class ArticleCacheAspect implements Ordered {
+
+	@Override
+	public int getOrder() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

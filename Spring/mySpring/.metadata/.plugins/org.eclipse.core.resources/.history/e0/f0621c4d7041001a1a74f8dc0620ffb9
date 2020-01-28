@@ -1,0 +1,46 @@
+package chris.spring.guestbook.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import chris.spring.guestbook.vo.GuestMessage;
+
+public class JdbcTemplateGuestMessageDao implements GuestMessageDao {
+
+	private JdbcTemplate jdbcTemplate;
+
+	public JdbcTemplateGuestMessageDao(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public int count() {
+		return jdbcTemplate.queryForObject("select count(*) from guestbook", Integer.class);
+	}
+
+	@Override
+	public List<GuestMessage> select(int begin, int end) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(GuestMessage message) {
+		int insertCount = jdbcTemplate.update("insert into guestbook(message_id, guest_name, message, registry_name)"
+				+ " values(guest_seq.nextval,?,?,?)",message.getGuestName(),message.getMessage(),message.getRegistryDate());
+		return insertCount;
+	}
+
+	@Override
+	public int delete(int id) {
+		return jdbcTemplate.update("delete from guestbook where message_id=?", id);
+	}
+
+	@Override
+	public int update(GuestMessage message) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

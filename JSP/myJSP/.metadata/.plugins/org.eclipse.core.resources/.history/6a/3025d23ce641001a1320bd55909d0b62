@@ -1,0 +1,7 @@
+package sec04.ex01;
+
+import javax.servlet.http.HttpSessionBindingListener;
+
+public class LoginImpl implements HttpSessionBindingListener {
+
+}

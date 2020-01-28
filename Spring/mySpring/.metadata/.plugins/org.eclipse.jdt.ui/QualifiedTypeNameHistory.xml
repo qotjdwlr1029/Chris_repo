@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.config.BeanPostProcessor"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.xml.XmlBeanFactory"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="chris.spring.web.common.JDBCUtil"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="chris.spring.web.common.LogAdvice"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.time.format.SignStyle"/>
+<fullyQualifiedTypeName name="chris.spring.board.service.WriteArticleService"/>
+<fullyQualifiedTypeName name="chris.spring.board.vo.AriticleNotFoundException"/>
+<fullyQualifiedTypeName name="chris.spring.board.vo.ArticleNotFoundException"/>
+<fullyQualifiedTypeName name="chris.spring.board.service.ReadArticleServiceImpl"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.annotation.AfterReturning"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.annotation.AfterThrowing"/>
+<fullyQualifiedTypeName name="chris.spring.member.service.MemberService"/>
+<fullyQualifiedTypeName name="chris.spring.web.board.BoardVO"/>
+<fullyQualifiedTypeName name="chris.spring.web.board.impl.BoardRowMapper"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="chris.spring.guestbook.dao.JdbcTemplateGuestMessageDao"/>
+<fullyQualifiedTypeName name="chris.spring.guestbook.controller.JdbcTemplateMain"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource"/>
+<fullyQualifiedTypeName name="chris.spring.guestbook.dao.GuestMessageRowMapper"/>
+<fullyQualifiedTypeName name="java.sql.Types"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.MapSqlParameterSource"/>
+</qualifiedTypeNameHistroy>

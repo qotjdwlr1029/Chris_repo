@@ -1,0 +1,22 @@
+package sec05.ex01;
+
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MemberDAO {
+
+	public List listMembers() {
+		List list = new ArrayList();
+		try {
+			connDB();
+			String query = "select * from t_member";
+			System.out.println(query);
+			ResultSet rs = stmt.executeQuery(query);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
+}

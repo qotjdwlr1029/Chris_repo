@@ -1,0 +1,5 @@
+package chris.spring.guestbook.controller;
+
+public class JdbcTemplateMain {
+
+}

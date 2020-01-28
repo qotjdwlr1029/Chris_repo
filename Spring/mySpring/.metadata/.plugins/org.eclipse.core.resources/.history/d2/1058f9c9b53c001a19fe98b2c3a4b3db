@@ -1,0 +1,13 @@
+package chris.spring.board.service;
+
+import chris.spring.board.vo.ArticleVO;
+
+public class WriteArticleServiceImpl implements WriteArticleService {
+
+	@Override
+	public void write(ArticleVO article) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package chris.spring.board.service;
+
+import chris.spring.board.vo.AriticleNotFoundException;
+import chris.spring.board.vo.ArticleVO;
+
+public interfacd ReadArticleService {
+
+	ArticleVO getArticleAndIncreaseReadCount(int id) throws AriticleNotFoundException;
+	
+}

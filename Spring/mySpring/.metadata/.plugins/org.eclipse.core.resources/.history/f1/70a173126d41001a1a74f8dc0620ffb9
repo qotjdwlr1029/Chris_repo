@@ -1,0 +1,10 @@
+package chris.spring.guestbook.vo;
+
+public class GuestMessage {
+
+	private int id;
+	private String guestName;
+	private String message;
+	private Date registryDate;
+	
+}

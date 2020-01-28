@@ -1,0 +1,5 @@
+package chris.spring.guestbook.vo;
+
+public class GuestMessageList {
+
+}

@@ -1,0 +1,15 @@
+package chris.spring.guestbook.controller;
+
+import chris.spring.guestbook.vo.GuestMessage;
+
+public class JdbcTemplateMain {
+	
+	private GuestMessage makeGuestMessage(String guestName, String message) {
+		GuestMessage msg = new GuestMessage();
+		msg.setGuestName(guestName);
+		msg.setMessage(message);
+		msg.setRegistryDate(new Date());
+		return msg;
+	}
+	
+}

@@ -1,0 +1,13 @@
+package chris.spring.common;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class ProfilingAdvice {
+
+	public Object trace(ProceedingJoinPoint joinpoint) throws Throwable {
+		
+		String signatureString = joinpoint.getSignature().toShortString();
+		
+	}
+	
+}

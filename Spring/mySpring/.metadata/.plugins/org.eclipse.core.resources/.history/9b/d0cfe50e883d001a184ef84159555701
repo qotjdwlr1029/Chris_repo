@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	
+	<!-- 1. xml 설정방법 -->
+	<!-- 장점 : 간단함 , 단점 : 모든정보를 다 볼 수 있음 -->
+	<!-- <bean id = "dataSource" class = "org.apache.commons.dbcp2.BasicDataSource">
+		<property name = "driverClassName" value = "oracle.jdbc.driver.OracleDriver"/>
+		<property name = "url" value = "jdbc:oracle:thin@localhost:1521/XEPDB1"/>
+		<property name = "username" value = "red"/>
+		<property name = "password" value = "red"/>
+	</bean> -->
+	
+	<!-- 2. properties 설정방법 -->
+	<!-- 단점 : 코드가 좀 더 길음 장점 : 정보의 보안성이 좀 더 좋다. -->
+	<context:property-placeholder location="classpath:config/database.properties"/><!-- 여기에 파일이 있다라는 의미. 읽어오는거 아님 -->
+	<bean id = "dataSource" class = "org.apache.commons.dbcp2.BasicDataSource">
+		<property name = "driverClassName" value = "${jdbc.driver}"/>
+		<property name = "url" value = "${jdbc.url}"/>
+		<property name = "username" value = "${jdbc.username}"/>
+		<property name = "password" value = "${jdbc.password}"/>
+	</bean>
+	
+	<bean id = "jdbcTemplate" class = "org.springframework.jdbc.core.JdbcTemplate">
+		<property name = "dataSource" ref = "dataSource"/> 
+	</bean>
+	
+	
+	
+	<context:component-scan base-package="chris.spring.web"></context:component-scan>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<!-- <context:component-scan base-package="chris.spring.web"></context:component-scan>
+	 <bean id = "log" class = "chris.spring.web.common.Log4jAdvice"></bean> 
+	<bean id = "before" class = "chris.spring.web.common.BeforeAdvice"></bean>
+	<bean id = "afterReturning" class = "chris.spring.web.common.AfterReturningAdvice"></bean>
+	<bean id = "afterThrowing" class = "chris.spring.web.common.AfterThrowingAdvice"></bean>
+	<bean id = "after" class = "chris.spring.web.common.AfterAdvice"/>
+	<bean id = "around" class = "chris.spring.web.common.AroundAdvice"/>
+	<aop:config>
+		<aop:pointcut expression="execution(* chris.spring.web..*Impl.*(..))" id="allPointcut"/>
+		<aop:pointcut expression="execution(* chris.spring.web..*Impl.get*(..))" id="getPointcut"/>
+		<aop:aspect ref="around">
+			<aop:around method = "aroundLog" pointcut-ref="getPointcut"/>
+		</aop:aspect>
+	</aop:config> -->
+	<!-- <bean id = "tv" class = "chris.spring.polymorphism.SamsungTV" 
+			p:speaker-ref="apple" p:price="300000"/>
+	<bean id="tv" class="chris.spring.polymorphism.SamsungTV">
+		<property name = "speaker" ref = "apple"/>
+		<property name = "price" value = "3000000"/>
+	</bean>
+	<bean id = "tv" class="chris.spring.polymorphism.SamsungTV"> <constructor-arg 
+		index = "0" ref = "apple"></constructor-arg> <constructor-arg index = "1" 
+		value = "300000"></constructor-arg> </bean>
+	<bean id = "sony" class = "chris.spring.polymorphism.SonySpeaker"/>
+	<bean id = "myLifeBean" class = "chris.spring.lifecycle.MyLifeBeanImpl" init-method = "init">
+		<property name = "greeting"><value>Hello, </value></property>
+	</bean> -->
+	<!-- 
+	<bean id="userService" class ="chris.spring.web.user.impl.UserServiceImpl">
+		<property name = "userDAO" ref = "userDAO"/>
+	</bean> 
+	<bean id = "userDAO" class = "chris.spring.web.user.impl.UserDAO"></bean> -->
+</beans>

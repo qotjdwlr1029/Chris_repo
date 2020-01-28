@@ -1,0 +1,11 @@
+package chris.spring.guestbook.dao;
+
+public interface GuestMessageDao {
+
+	public int count();
+	public List<GuestMessage> select();
+	public int insert(GuestMessage message);
+	public int delete(int id);
+	public int update(GuestMessage);
+	
+}

@@ -1,0 +1,12 @@
+package sec05.ex01;
+
+public class MemberVO {
+
+	private String id;
+	private String pwd;
+	private String name;
+	private String email;
+	private Date joinDate;
+	
+	
+}

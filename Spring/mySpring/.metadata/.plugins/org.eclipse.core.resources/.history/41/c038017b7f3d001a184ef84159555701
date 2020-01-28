@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	
+	
+	
+	
+	
+	
+	
+	<context:component-scan base-package="chris.spring.web"></context:component-scan>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<!-- <context:component-scan base-package="chris.spring.web"></context:component-scan>
+	 <bean id = "log" class = "chris.spring.web.common.Log4jAdvice"></bean> 
+	<bean id = "before" class = "chris.spring.web.common.BeforeAdvice"></bean>
+	<bean id = "afterReturning" class = "chris.spring.web.common.AfterReturningAdvice"></bean>
+	<bean id = "afterThrowing" class = "chris.spring.web.common.AfterThrowingAdvice"></bean>
+	<bean id = "after" class = "chris.spring.web.common.AfterAdvice"/>
+	<bean id = "around" class = "chris.spring.web.common.AroundAdvice"/>
+	<aop:config>
+		<aop:pointcut expression="execution(* chris.spring.web..*Impl.*(..))" id="allPointcut"/>
+		<aop:pointcut expression="execution(* chris.spring.web..*Impl.get*(..))" id="getPointcut"/>
+		<aop:aspect ref="around">
+			<aop:around method = "aroundLog" pointcut-ref="getPointcut"/>
+		</aop:aspect>
+	</aop:config> -->
+	<!-- <bean id = "tv" class = "chris.spring.polymorphism.SamsungTV" 
+			p:speaker-ref="apple" p:price="300000"/>
+	<bean id="tv" class="chris.spring.polymorphism.SamsungTV">
+		<property name = "speaker" ref = "apple"/>
+		<property name = "price" value = "3000000"/>
+	</bean>
+	<bean id = "tv" class="chris.spring.polymorphism.SamsungTV"> <constructor-arg 
+		index = "0" ref = "apple"></constructor-arg> <constructor-arg index = "1" 
+		value = "300000"></constructor-arg> </bean>
+	<bean id = "sony" class = "chris.spring.polymorphism.SonySpeaker"/>
+	<bean id = "myLifeBean" class = "chris.spring.lifecycle.MyLifeBeanImpl" init-method = "init">
+		<property name = "greeting"><value>Hello, </value></property>
+	</bean> -->
+	<!-- 
+	<bean id="userService" class ="chris.spring.web.user.impl.UserServiceImpl">
+		<property name = "userDAO" ref = "userDAO"/>
+	</bean> 
+	<bean id = "userDAO" class = "chris.spring.web.user.impl.UserDAO"></bean> -->
+</beans>

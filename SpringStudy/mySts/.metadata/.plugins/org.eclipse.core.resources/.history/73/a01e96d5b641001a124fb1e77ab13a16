@@ -1,0 +1,21 @@
+package chris.spring.guestbook.controller;
+
+import java.util.Date;
+
+import chris.spring.guestbook.vo.GuestMessage;
+
+public class NamedParameterMain {
+
+	private GuestMessage makeGuestMessage(String guestName, String message) {
+		GuestMessage msg = new GuestMessage();
+		msg.setGuestName(guestName);
+		msg.setMessage(message);
+		msg.setRegistryDate(new Date());
+		return msg;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

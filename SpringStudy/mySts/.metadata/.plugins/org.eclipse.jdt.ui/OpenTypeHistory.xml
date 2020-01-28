@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=myboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;chris.spring.polymorphism{Speaker.java[Speaker" modifiers="513" timestamp="1579590699307"/>
+<typeInfo handle="=myboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;chris.spring.web.board{BoardService.java[BoardService" modifiers="513" timestamp="1579593948638"/>
+<typeInfo handle="=myboard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;chris.spring.web.user{UserService.java[UserService" modifiers="513" timestamp="1579595438334"/>
+<typeInfo handle="=springJDBC/C:\/Users\/chris\/.m2\/repository\/org\/springframework\/spring-jdbc\/5.2.3.RELEASE\/spring-jdbc-5.2.3.RELEASE.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-jdbc=/=/maven.version=/5.2.3.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1579742401099"/>
+<typeInfo handle="=springJDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;chris.spring.guestbook.dao{GuestMessageDao.java[GuestMessageDao" modifiers="513" timestamp="1580188524621"/>
+</typeInfoHistroy>
