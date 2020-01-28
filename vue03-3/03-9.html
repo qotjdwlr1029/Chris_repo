@@ -13,24 +13,27 @@
   </body>
   <script src = 'https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js'></script>
   <script>
+
     Vue.component('child-component',{
-      template : '<button v-on:click="showLog">show</button>',
+      template : '<button v-on:click="showLog">var</button>',
       methods : {
         showLog : function(){
-          this.$emit('show-log')
+          this.$emit('show-log');
         }
       }
     });
+
     new Vue({
-      el : '#app',
+      el : "#app",
       data : {
         message : 'Hello Vue! passed from Parent Component'
       },
       methods : {
         printText : function(){
-          console.log("received an event");
+          console.log('received an event');
         }
       }
     });
+
   </script>
 </html>
