@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+function fn_process(){
+	$.ajax({
+		type:"post",
+		async:false,
+		url:"http://localhost:8080/pro16/ajaxTest2",
+		dataType:"text",
+		success:function (request,textStatus){
+			$(request).find("book").each(function(){
+				var title=$(this).find("title").text();
+				var writer=$(this).find("writer").text();
+				var image=$(this).find("image").text();
+				$("#bookInfo").append(
+					"<p>" + title + "</p>" +
+					"<p>" + writer + "</p>" + 
+					"<img src=" + image + "/>"
+				);
+			});
+		},
+		complete:function(){
+			alert("로딩이 완료되었습니다.");
+			console.log(request.responseText);
+		},
+		error:function(request,status,error){
+	        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+	    }
+	});
+}
+</script>
+</head>
+<body>
+<input type="button" value="가져오기" onclick="fn_process()"><br>
+<div id="bookInfo">
+</div>
+</body>
+</html>
