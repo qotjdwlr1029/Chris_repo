@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;pro13&apos;&#x0D;&#x0A;- Original project: &apos;pro13&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     commons-collections4-4.4.jar&#x0D;&#x0A;     commons-dbcp2-2.7.0.jar&#x0D;&#x0A;     commons-pool2-2.8.0.jar" description="Delete elements" element1="WebContent/WEB-INF/lib/commons-dbcp2-2.7.0.jar" element2="WebContent/WEB-INF/lib/commons-pool2-2.8.0.jar" element3="WebContent/WEB-INF/lib/commons-collections4-4.4.jar" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1580375710928" subPackages="false" version="1.0"/>
+</session>

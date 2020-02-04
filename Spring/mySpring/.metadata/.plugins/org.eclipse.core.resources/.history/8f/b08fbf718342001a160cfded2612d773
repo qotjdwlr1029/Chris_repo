@@ -1,0 +1,34 @@
+package chris.spring.store.service;
+
+import chris.spring.store.dao.ItemDao;
+import chris.spring.store.dao.PaymentInfoDao;
+import chris.spring.store.dao.PurchaseOrderDao;
+import chris.spring.store.vo.ItemNotFoundException;
+import chris.spring.store.vo.PurchaseOrderRequest;
+import chris.spring.store.vo.PurchaseOrderResult;
+
+public class PlaceOrderServiceImplTwo implements PlaceOrderService {
+
+	private ItemDao itemDao;
+	private PaymentInfoDao paymentInfoDao;
+	private PurchaseOrderDao purchaseOrderDao;
+	
+	public void setItemDao(ItemDao itemDao) {
+		this.itemDao = itemDao;
+	}
+
+	public void setPaymentInfoDao(PaymentInfoDao paymentInfoDao) {
+		this.paymentInfoDao = paymentInfoDao;
+	}
+
+	public void setPurchaseOrderDao(PurchaseOrderDao purchaseOrderDao) {
+		this.purchaseOrderDao = purchaseOrderDao;
+	}
+
+	@Override
+	public PurchaseOrderResult order(PurchaseOrderRequest orderRequest) throws ItemNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

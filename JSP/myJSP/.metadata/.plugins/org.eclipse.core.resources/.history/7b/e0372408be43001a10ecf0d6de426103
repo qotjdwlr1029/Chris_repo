@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="java.util.*, sec01.ex01.*"
+    isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sum.com/jsp/jstl/core" %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<jsp:useBean id="membersList" class="java.util.ArrayList"/>
+<jsp:useBean id="membersMap" class="java.util.HashMap"/>
+<%
+	membersMap.put("id","park2");
+	membersMap.put("pwd","4321");
+	membersMap.put("name","박지성");
+	membersMap.put("email","park2@test.com");
+	MemberBean m1 = new MemberBean("son","1234","손흥민","son@test.com");
+	MemberBean m2 = new MemberBean("ki","4321","기성용","ki@test.com");
+	membersList.add(m1);
+	membersList.add(m2);
+	membersMap.put("membersList",membersList);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

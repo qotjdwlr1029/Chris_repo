@@ -1,0 +1,29 @@
+package chris.spring.web.common;
+
+import org.springframework.web.servlet.ModelAndView;
+
+@ControllAdvice("chris.spring.web")
+public class CommonExceptionHandler {
+
+	public ModelAndView handlerArthemeticException(Exception e) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("exception",e);
+		mav.setViewName("/common/arthmetichError.jsp");
+		return mav;
+	}
+	
+	public ModelAndView handlerNullPointerException(Exception e) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("exception",e);
+		mav.setViewName("/common/nullPointerError.jsp");
+		return mav;
+	}
+	
+	public ModelAndView handlerException(Exception e) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("exception",e);
+		mav.setViewName("/common/Error.jsp");
+		return mav;
+	}
+	
+}

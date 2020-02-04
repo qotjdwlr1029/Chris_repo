@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	function fn_process(){
+		var value= $("#t_input").val();
+		$("#t_output").val(value);
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

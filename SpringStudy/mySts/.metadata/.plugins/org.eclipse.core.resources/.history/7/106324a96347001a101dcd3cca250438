@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+<h1>로그인</h1>
+<form action="login.do" method="post">
+<table border="1">
+	<tr>
+		<td>아이디</td>
+		<td><input type="text" name="id" value="${UserVO.id }"></td>
+		<%-- get방식으로 요청하는 경우에 LoginController Component의 UserVO 객체에 세팅한 값이 들어온다. --%>
+	</tr>
+	<tr>
+		<td>비밀번호</td>
+		<td><input type="password" name="password" value="${UserVO.password }"></td>
+		<%-- get방식으로 요청하는 경우에 LoginController Component의 UserVO 객체에 세팅한 값이 들어온다. --%>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="로그인"></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

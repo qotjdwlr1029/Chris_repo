@@ -1,0 +1,21 @@
+package chris.spring.web.board;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import chris.spring.web.board.impl.BoardDAO;
+
+@Controller
+public class BoardController {
+
+	@RequestMapping(value="/insertBoard.do")
+	public String insertBoard(BoardVO vo, BoardDAO boardDao) {
+		System.out.println("글 등록 처리");
+		//1. 사용자 입력 정보 추출 : 커맨드 객체가 자동으로 처리해 줌.
+		//2. 데이터베이스 연동처리
+		//boardDAO객체도 VO와 동일하게 커맨드 객체를 사용해서 자동으로 매핑한다.
+		boardDao.insertBoard(vo);
+		return "getBoardList.do";//비즈니스 로직 종료후에 View경로를 리턴한다.
+	}
+	
+}

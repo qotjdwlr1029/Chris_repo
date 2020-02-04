@@ -1,0 +1,17 @@
+package chris.spring.web.controller;
+
+public class ViewResolver {
+
+	private String prefix;	//접두어
+	private String suffix;	//접미어
+	
+	public void setPrefix(String prefix) {
+		this.prefix = prefix;
+	}
+	public void setSuffix(String suffix) {
+		this.suffix = suffix;
+	}
+	
+	
+	
+}

@@ -1,0 +1,29 @@
+package chris.spring.store.dao.jdbc;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+
+import chris.spring.store.dao.PaymentInfoDao;
+import chris.spring.store.vo.PaymentInfo;
+
+public class JdbcPaymentInfoDao implements PaymentInfoDao{
+
+	private SimpleJdbcInsert insert;
+	private NamedParameterJdbcTemplate namedTemplate;
+
+	public JdbcPaymentInfoDao(SimpleJdbcInsert insert) {
+		super();
+		this.insert = insert;
+		insert.withTableName("payment_info").usingColumns("payment_info_id","price");
+	}
+
+
+
+	@Override
+	public void insert(PaymentInfo paymentInfo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

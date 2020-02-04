@@ -1,0 +1,24 @@
+package chris.spring.web.board;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import chris.spring.web.board.impl.BoardDAO;
+
+@Controller
+public class UpdateBoardController{
+
+	@RequestMapping("/updateBoard.do")
+	public String updateBoard(BoardVO vo, BoardDAO boardDao) {
+		System.out.println("글 수정 처리");
+		//1. 사용자의 입력 정보 추출
+
+		//2. 데이터베이스 연동 처리
+		boardDao.updateBoard(vo);
+		//3. 화면 네비게이션
+
+		return "redirect:getBoardList.do";
+		
+	}
+
+}

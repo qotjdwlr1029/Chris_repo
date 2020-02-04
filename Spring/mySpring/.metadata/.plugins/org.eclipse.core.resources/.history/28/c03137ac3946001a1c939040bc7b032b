@@ -1,0 +1,72 @@
+package chris.spring.web.board;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import chris.spring.web.board.impl.BoardDAO;
+
+@Controller
+public class BoardController {
+
+	@RequestMapping(value = "/insertBoard.do")
+	public String insertBoard(BoardVO vo) throws IOException {
+							//Command 객체
+		System.out.println("글 등록 처리");
+		//1. 사용자의 입력 정보 추출
+		//2. 데이터베이스 연동 처리
+		BoardDAO boardDao = new BoardDAO();
+		boardDao.insertBoard(vo);
+		//3. 화면 네비게이션
+		return "getBoardList.do";		
+		//POJO형식으로 변경된 클래스 이므로 내 마음대로 변경이 가능하다.
+		//따라서 return타입을 void로 변경해서 3.화면 네비게이션 부분을 지웠다.
+	}
+	
+	@RequestMapping("/updateBoard.do")
+	public String updateBoard(BoardVO vo, BoardDAO boardDao) {
+		System.out.println("글 수정 처리");
+		//1. 사용자의 입력 정보 추출
+		//2. 데이터베이스 연동 처리
+		boardDao.updateBoard(vo);
+		//3. 화면 네비게이션
+		return "redirect:getBoardList.do";
+	}
+	
+	@RequestMapping("/deleteBoard.do")
+	public String deleteBoard(BoardVO vo, BoardDAO boardDao) {
+		System.out.println("글 삭제 처리");
+		//1. 사용자의 입력 정보 추출
+		//2. 데이터베이스 연동 처리
+		boardDao.deleteBoard(vo);
+		//3. 화면 네비게이션
+		return "getBoardList.do";		
+	}
+	
+	@RequestMapping("/getBoard.do")
+	public String getBoard(BoardVO vo, BoardDAO boardDao, Model model) {
+		System.out.println("글 상세 보기처리");
+		//1. 사용자의 입력 정보 추출
+		//2. 데이터베이스 연동 처리
+		BoardVO board = boardDao.getBoard(vo);
+		//3. 화면 네비게이션
+		model.addAttribute("board", board);
+		return "getBoard.jsp";
+	}
+	
+	@RequestMapping("/getBoardList.do")
+	public String getBoardList(@RequestParam(value="searchCondition" defaultValue="TITLE", required="false")String condition ,BoardVO vo, BoardDAO boardDAO, Model model) {
+		//1. 사용자의 입력 정보 추출
+		//2. DB 연동 처리
+		List<BoardVO> boardList = boardDAO.getBoardList(vo);
+		//3. 화면 네비게이션		 
+		model.addAttribute("boardList",boardList);
+		return "getBoardList.jsp";
+		//ViewResolver를 안쓰니깐 .jsp를 적어야 한다.
+	}
+	
+}

@@ -1,0 +1,16 @@
+package chris.spring.web.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HandlerMapping {
+	
+	private Map<String, Controller> mappings;
+
+	public HandlerMapping() {
+		mappings = new HashMap<String, Controller>(;)
+	}
+	
+	
+	
+}

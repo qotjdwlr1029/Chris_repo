@@ -1,0 +1,40 @@
+package chris.spring.web.board;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import chris.spring.web.board.impl.BoardDAO;
+
+@Controller
+public class InsertBoardController {
+
+	
+	//어노테이션 문법을 사용하면 @Controller를 사용하므로서 interface의 상속을 받지 않게된다.
+	//따라서 Override된 메서드의 이름을 변경할 수 있다.
+	//메서드의 매개변수도 변경이 가능하다.(response를 굳이 사용하지 않으니 지운다.)
+	
+	
+	public ModelAndView insertBoard(HttpServletRequest request) {
+		System.out.println("글 등록 처리");
+		String title = request.getParameter("title");
+		String writer = request.getParameter("writer");
+		String content = request.getParameter("content");
+		
+		BoardVO vo = new BoardVO();
+		vo.setTitle(title);
+		vo.setWriter(writer);
+		vo.setContent(content);
+		
+		BoardDAO boardDao = new BoardDAO();
+		boardDao.insertBoard(vo);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("getBoardList.do");
+		
+		return mav;
+	}
+
+}

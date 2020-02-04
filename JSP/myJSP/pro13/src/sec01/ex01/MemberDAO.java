@@ -18,14 +18,12 @@ public class MemberDAO {
 	public Connection getConnection() {
 		Connection con = null;
 		try {
-			Context ctx = new InitialContext();
-			Context envContext = (Context) ctx.lookup("java:comp/env");
-			DataSource ds = (DataSource)envContext.lookup("jdbc/myOracle");
+			Context ctx = new InitialContext();	
+			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/myOracle");
 			con = ds.getConnection();
-			System.out.println(con);
+			System.out.println("aaa" + con);
 		}catch(Exception e) {
 			e.printStackTrace();
-			System.out.println("커넥션풀 실패");
 		}
 		return con;
 	}

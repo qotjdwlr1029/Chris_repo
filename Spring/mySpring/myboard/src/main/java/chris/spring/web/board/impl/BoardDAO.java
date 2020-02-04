@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import chris.spring.web.board.BoardVO;
 import chris.spring.web.common.JDBCUtil;
+
 @Repository("boardDAO")
 public class BoardDAO {
 
@@ -22,6 +23,9 @@ public class BoardDAO {
 	private final String BOARD_DELETE = "delete myboard where seq = ?";
 	private final String BOARD_GET = "select * from myboard where seq = ?";
 	private final String BOARD_LIST = "select * from myboard order by seq desc";
+	//쿼리문 추가(검색기능)
+	private final String BOARD_LIST_T = "select * from myboard where title like '%'||?||'%' order by seq desc";
+	private final String BOARD_LIST_C = "select * from myboard where content like '%'||?||'%' order by seq desc";
 	
 	public void insertBoard(BoardVO vo) {
 		System.out.println("JDBC로 insertBoard() 기능 처리");
@@ -99,7 +103,12 @@ public class BoardDAO {
 		List<BoardVO> boardList = new ArrayList<BoardVO>();
 		try {
 			con = JDBCUtil.getConnection();
-			pstmt = con.prepareStatement(BOARD_LIST);
+			if(vo.getSearchCondition().equals("TITLE")) {
+				pstmt = con.prepareStatement(BOARD_LIST_T);
+			}else if(vo.getSearchCondition().equals("CONTENT")) {
+				pstmt = con.prepareStatement(BOARD_LIST_C);
+			}
+			pstmt.setString(1,vo.getSearchKeyword());
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				BoardVO board = new BoardVO();

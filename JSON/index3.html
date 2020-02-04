@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Access a JavaScript object:</p>
+    <p>JS객체로 접근</p>
+    <p id="demo1"></p>
+    <p>JS접근결과(배열 연산자)</p>
+    <p id="demo2"></p><br>
+    데이터 재 할당후 결과값(이름값)
+    <p id="demo3"></p>
+    <script>
+      var myObj, x;
+      myObj = { name : "John", age:30,city:"New York"};
+      x = myObj.name;
+      y = myObj['name'];
+      document.getElementById("demo1").innerHTML=x;
+      document.getElementById("demo2").innerHTML=y;
+      myObj.name="Gilbert";
+      document.getElementById("demo3").innerHTML=myObj.name;
+    </script>
+  </body>
+</html>

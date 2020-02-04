@@ -1,0 +1,22 @@
+package chris.spring.store.dao.jdbc;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+
+import chris.spring.store.dao.PurchaseOrderDao;
+import chris.spring.store.vo.PurchaseOrder;
+
+public class JdbcPurchaseOrderDao implements PurchaseOrderDao {
+
+	private SimpleJdbcInsert insert;
+	private NamedParameterJdbcTemplate namedJdbcTemplate;
+	
+	
+	
+	@Override
+	public void insert(PurchaseOrder order) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

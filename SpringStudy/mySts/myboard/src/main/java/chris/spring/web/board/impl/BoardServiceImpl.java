@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 import chris.spring.web.board.BoardService;
 import chris.spring.web.board.BoardVO;
 
-@Service("boardService")
+/*
+@Service("boardService")		//XXXController 사용자 요청을 제어하는 Controller클래스
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
@@ -43,3 +44,4 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 }
+*/

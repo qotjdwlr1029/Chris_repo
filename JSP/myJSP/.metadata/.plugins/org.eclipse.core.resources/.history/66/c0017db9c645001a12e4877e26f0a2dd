@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(function(){
+	$("#checkJson").click(function(){
+		$.ajax({
+			type:"post",
+			async:false,
+			url:"${pageContext.request.contextPath}/json3",
+			success:function(data,textStatus){
+				var jsonInfo = JSON.parse(data);
+				var memberInfo = "회원 정보<br>";
+				memberInfo += "=======<br>";
+				for(var i in memberInfo.)
+			}
+		});//end ajax;
+	});
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

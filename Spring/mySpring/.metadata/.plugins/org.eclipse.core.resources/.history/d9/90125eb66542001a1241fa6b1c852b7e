@@ -1,0 +1,17 @@
+package chris.spring.store.dao.jdbc;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import chris.spring.store.dao.ItemDao;
+import chris.spring.store.vo.Item;
+
+public class JdbcItemDao implements ItemDao {
+
+	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public Item FindById(Integer itemId) {
+		
+	}
+
+}

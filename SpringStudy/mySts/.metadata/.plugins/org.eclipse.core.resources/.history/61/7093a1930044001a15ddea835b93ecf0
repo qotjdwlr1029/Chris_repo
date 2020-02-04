@@ -1,0 +1,21 @@
+package chris.spring.web.user;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+
+public class LogoutController implements Controller{
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println("로그아웃 처리");
+		HttpSession session = request.getSession(false);
+		//만일 세션이 있다면 새로운 세션 객체를 생성하지 않고, null을 반환한다.
+		session.invalidate();
+		
+		return "login.do";
+	}
+
+}

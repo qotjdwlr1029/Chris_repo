@@ -1,0 +1,10 @@
+package chris.spring.web.controller;
+
+import java.util.Map;
+
+public class HandlerMapping {
+
+	private Map<String, Controller> mappings;
+	
+	
+}

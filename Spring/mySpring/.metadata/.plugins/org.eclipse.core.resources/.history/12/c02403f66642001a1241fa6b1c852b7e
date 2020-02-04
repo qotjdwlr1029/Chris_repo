@@ -1,0 +1,16 @@
+package chris.spring.store.dao.jdbc;
+
+import chris.spring.store.dao.PaymentInfoDao;
+import chris.spring.store.vo.PaymentInfo;
+
+public class JdbcPaymentInfoDao implements PaymentInfoDao{
+
+	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public void insert(PaymentInfo paymentInfo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package chris.spring.store.controller;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import chris.spring.store.service.PlaceOrderService;
+
+public class OrderServiceTestOne {
+
+	private PlaceOrderService placeOrderService;
+	private AbstractApplicationContext context;
+	
+	public OrderServiceTestOne() {
+		String[] configLocations = new String[] {"transactionOne.xml"};
+		context = new ClassPathXmlApplicationContext(configLocations);
+		placeOrderService = (PlaceOrderService) context.getBean("placeOrderService");
+	}
+	
+	public void order() {
+		PurchaseOrderRequest orderRequest = new PurchaseOrderRequest();
+	}
+	
+}

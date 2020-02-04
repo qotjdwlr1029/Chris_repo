@@ -1,0 +1,37 @@
+package chris.spring.store.dao.jdbc;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+
+import chris.spring.store.dao.PurchaseOrderDao;
+import chris.spring.store.vo.PurchaseOrder;
+
+public class JdbcPurchaseOrderDao implements PurchaseOrderDao {
+
+	private SimpleJdbcInsert insert;
+	private NamedParameterJdbcTemplate namedJdbcTemplate;
+
+	public JdbcPurchaseOrderDao(SimpleJdbcInsert insert) {
+		super();
+		this.insert = insert;
+		//어떤 테이블의 어떤 컬럼명을 insert구문 사용시에 사용할지 지정해주는 메서드이다.
+		insert.withTableName("purchase_order").usingColumns("purchase_order_id","item_id","payment_info_id","address");
+	}
+
+	public NamedParameterJdbcTemplate getNamedJdbcTemplate() {
+		return namedJdbcTemplate;
+	}
+
+	public void setNamedJdbcTemplate(NamedParameterJdbcTemplate namedJdbcTemplate) {
+		this.namedJdbcTemplate = namedJdbcTemplate;
+	}
+
+
+
+	@Override
+	public void insert(PurchaseOrder order) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

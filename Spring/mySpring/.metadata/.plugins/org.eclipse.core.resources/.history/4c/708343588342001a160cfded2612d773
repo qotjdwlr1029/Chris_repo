@@ -1,0 +1,15 @@
+package chris.spring.store.service;
+
+import chris.spring.store.vo.ItemNotFoundException;
+import chris.spring.store.vo.PurchaseOrderRequest;
+import chris.spring.store.vo.PurchaseOrderResult;
+
+public class PlaceOrderServiceImplTwo implements PlaceOrderService {
+
+	@Override
+	public PurchaseOrderResult order(PurchaseOrderRequest orderRequest) throws ItemNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -16,7 +16,7 @@ public class NamedParamGuestMessageDao implements GuestMessageDao {
 	private NamedParameterJdbcTemplate template;
 	private SimpleJdbcInsert insertMessage;
 	
-	public void setInsertMessage(SimpleJdbcInsert insertMessage) {
+	public NamedParamGuestMessageDao(SimpleJdbcInsert insertMessage) {
 		this.insertMessage = insertMessage;
 		insertMessage.withTableName("guestbook");
 		insertMessage.usingColumns("message_id","guest_name","message","registry_date");

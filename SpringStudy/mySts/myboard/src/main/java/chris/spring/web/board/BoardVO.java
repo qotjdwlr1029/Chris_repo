@@ -9,6 +9,21 @@ public class BoardVO {
 	private String writer;
 	private String content;
 	private Date regDate;
+	private String searchCondition;
+	private String searchKeyword;
+	
+	public String getSearchCondition() {
+		return searchCondition;
+	}
+	public void setSearchCondition(String searchCondition) {
+		this.searchCondition = searchCondition;
+	}
+	public String getSearchKeyword() {
+		return searchKeyword;
+	}
+	public void setSearchKeyword(String searchKeyword) {
+		this.searchKeyword = searchKeyword;
+	}
 	private int Cnt;
 	public int getSeq() {
 		return seq;

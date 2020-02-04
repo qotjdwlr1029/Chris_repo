@@ -1,0 +1,9 @@
+package chris.spring.store.vo;
+
+public class PurchaseOrderResult {
+
+	private Item item;
+	private PaymentInfo paymentInfo;
+	private PurchaseOrder order;
+	
+}

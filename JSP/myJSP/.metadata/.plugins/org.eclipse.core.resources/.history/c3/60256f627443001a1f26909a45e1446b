@@ -1,0 +1,17 @@
+package sec01.ex01;
+
+public class MemberBean {
+
+	String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+}

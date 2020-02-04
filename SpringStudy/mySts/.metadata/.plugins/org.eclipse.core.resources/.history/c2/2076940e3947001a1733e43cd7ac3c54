@@ -1,0 +1,26 @@
+package chris.spring.web.board;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import chris.spring.web.board.impl.BoardDAO;
+
+//Controller로서 사용하기 위해 어노테이션을 설정한다.<context>태그에 의해서
+//자동으로 찾을 수 있다. 하지만 어떤 요청이 들어왔을때 해당 component를 사용할지 
+//지정이 되지 않았기 때문에, @RequestMapping을 사용하여 지정한다.
+
+@Controller
+public class UpdateBoardController{
+
+	@RequestMapping("/updateBoard.do")
+	public String updateBoard(BoardVO vo, BoardDAO boardDao) {
+		System.out.println("글 수정 처리");
+		// 1. 사용자 입력 정보 추출
+		// 2. 데이터베이스 연동 처리
+		
+		boardDao.updateBoard(vo);
+
+		return "getBoardList.do";
+	}
+
+}

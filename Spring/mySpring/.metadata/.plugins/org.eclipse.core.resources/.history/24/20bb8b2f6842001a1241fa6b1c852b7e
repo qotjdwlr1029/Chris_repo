@@ -1,0 +1,14 @@
+package chris.spring.store.dao.jdbc;
+
+import chris.spring.store.dao.PurchaseOrderDao;
+import chris.spring.store.vo.PurchaseOrder;
+
+public class JdbcPurchaseOrderDao implements PurchaseOrderDao {
+
+	@Override
+	public void insert(PurchaseOrder order) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

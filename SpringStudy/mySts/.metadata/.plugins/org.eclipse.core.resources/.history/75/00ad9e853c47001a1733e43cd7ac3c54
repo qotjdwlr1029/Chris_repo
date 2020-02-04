@@ -1,0 +1,6 @@
+package chris.spring.web.board;
+
+@Controller
+public class BoardController {
+
+}

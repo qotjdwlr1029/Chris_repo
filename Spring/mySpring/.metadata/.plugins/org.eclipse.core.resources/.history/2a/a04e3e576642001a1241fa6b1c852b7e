@@ -1,0 +1,5 @@
+package chris.spring.store.dao.jdbc;
+
+public class JdbcPaymentInfoDao implements PaymentInfoDao{
+
+}

@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="chris.spring.web.board.BoardVO" %>
+<%@ page import="chris.spring.web.board.impl.BoardDAO" %>
+<%
+	//1. 사용자의 입력 정보 추출
+	request.setCharacterEncoding("utf-8");
+	String title = request.getParameter("title");
+	String content = request.getparameter("content");
+	String seq = request.getParameter("seq");
+	//2. 데이터베이스 연동 처리
+	BoardVO vo = new BoardVO();
+	vo.setSeq(Integer.parseInt(seq));
+	
+	BoardDAO boardDao = new BoardDAO();
+	BoardVO board = boardDao.getBoard(vo);
+	//3. 화면 네비게이션
+%>

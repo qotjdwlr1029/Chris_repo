@@ -1,0 +1,9 @@
+package sec01.ex01;
+
+public class MemberDAO {
+
+	private Connection con;
+	private PreparedStatement pstmt;
+	private DataSource dataFacoty;
+	
+}

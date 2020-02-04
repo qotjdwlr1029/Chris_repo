@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<jsp:useBean id="m1" class="sec01.ex01.MemberBean"/>
+<jsp:setProperty property="*" name="m1"/>
+<jsp:useBean id="m2" class="sec01.ex01.Address"/>
+<jsp:setProperty property="city" name="m2" value="서울"/>
+<jsp:setProperty property="zipcode" name="m2" value="07654"/>
+<%
+	m1.setAddr(m2);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

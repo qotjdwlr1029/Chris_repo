@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="chris.spring.web.board.impl.BoardDAO" %>
+<%@ page import="chris.spring.web.board.BoardVO" %>
+<%
+	BoardVO vo = new BoardVO();
+	BoardDAO boardDao = new BoardDAO();
+	List<BoardVO> boardList = boardDao.getBoardList(vo);
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

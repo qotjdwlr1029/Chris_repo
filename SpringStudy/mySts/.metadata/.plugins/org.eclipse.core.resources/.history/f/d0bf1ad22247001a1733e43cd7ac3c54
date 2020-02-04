@@ -1,0 +1,35 @@
+package chris.spring.web.board;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import chris.spring.web.board.impl.BoardDAO;
+
+@Controller
+public class InsertBoardController {
+
+	@Override
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println("글 등록 처리");
+		String title = request.getParameter("title");
+		String writer = request.getParameter("writer");
+		String content = request.getParameter("content");
+		
+		BoardVO vo = new BoardVO();
+		vo.setTitle(title);
+		vo.setWriter(writer);
+		vo.setContent(content);
+		
+		BoardDAO boardDao = new BoardDAO();
+		boardDao.insertBoard(vo);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("getBoardList.do");
+		
+		return mav;
+	}
+
+}

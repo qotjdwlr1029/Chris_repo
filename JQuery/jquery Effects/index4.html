@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          //$("#div1").fadeToggle("fast");
+          //$("#div2").fadeToggle("slow");
+          //$("#div3").fadeToggle(2500);
+          $("#div1").fadeTo("slow",0.15);
+          $("#div2").fadeTo("slow",0.4);
+          $("#div3").fadeTo("slow",0.7);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Demonstrate fadeToggle() with different speed prarmeters.</p>
+    <button>Click to fade in/out boxes</button><br><br>
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div><br>
+  </body>
+</html>

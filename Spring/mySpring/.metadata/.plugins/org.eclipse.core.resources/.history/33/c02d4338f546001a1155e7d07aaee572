@@ -1,0 +1,13 @@
+package chris.spring.web.common;
+
+import org.springframework.web.servlet.ModelAndView;
+
+public class CommonExceptionHandler {
+
+	public ModelAndView handlerArthemeticException(Exception e) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("exception",e);
+		mav.setViewName("/common/arthmetichError.jsp");
+	}
+	
+}

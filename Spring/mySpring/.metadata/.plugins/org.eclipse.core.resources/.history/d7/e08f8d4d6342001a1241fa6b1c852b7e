@@ -1,0 +1,10 @@
+package chris.spring.store.vo;
+
+public class PurchaseOrder {
+
+	private Integer id;
+	private Integer itemId;
+	private String address;
+	private Integer paymentInfoId;
+	
+}

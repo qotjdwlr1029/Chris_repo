@@ -7,11 +7,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import chris.spring.web.board.BoardVO;
-@Repository
+/*
+@Repository	//XXXDAO 데이터베이스 연동을 처리하는 DAO클래스
 public class BoardDAOSpring {
 
 	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbcTemplate;//XML파일에 있음
 	private final String BOARD_INSERT = "insert into myboard(seq,title,writer,content)"
 			+ " values((select nvl(max(seq),0)+1 from myboard),?,?,?)";
 	private final String BOARD_UPDATE = "update myboard set title=?, content=? where seq = ?";
@@ -45,3 +46,4 @@ public class BoardDAOSpring {
 	}
 	
 }
+*/

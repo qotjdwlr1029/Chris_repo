@@ -1,0 +1,17 @@
+package chris.spring.store.controller;
+
+import org.springframework.context.support.AbstractApplicationContext;
+
+import chris.spring.store.service.PlaceOrderService;
+
+public class OrderServiceTestOne {
+
+	private PlaceOrderService placeOrderService;
+	private AbstractApplicationContext context;
+	
+	public OrderServiceTextOne {
+		String[] configLocations = new String[] {"transactionOne.xml"};
+		
+	}
+	
+}

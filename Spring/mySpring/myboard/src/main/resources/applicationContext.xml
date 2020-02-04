@@ -25,6 +25,7 @@
 	<!-- 2. properties 설정방법 -->
 	<!-- 단점 : 코드가 좀 더 길음 장점 : 정보의 보안성이 좀 더 좋다. -->
 	<context:property-placeholder location="classpath:config/database.properties"/><!-- 여기에 파일이 있다라는 의미. 읽어오는거 아님 -->
+	
 	<bean id = "dataSource" class = "org.apache.commons.dbcp2.BasicDataSource">
 		<property name = "driverClassName" value = "${jdbc.driver}"/>
 		<property name = "url" value = "${jdbc.url}"/>
