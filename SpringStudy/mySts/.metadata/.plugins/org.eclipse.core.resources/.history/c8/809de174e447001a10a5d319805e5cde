@@ -1,0 +1,12 @@
+package chris.spring.web.board;
+
+import chris.spring.web.board.impl.BoardDAO;
+
+public class BoardServiceClient {
+
+	public static void main(String[] args) {
+		BoardDAO boardDAO = new BoardDAO();
+		BoardVO vo = new BoardVO();
+	}
+
+}

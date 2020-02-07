@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BoardDAO">
+<!-- 3.0버전에서부터는 namespace는 필수 항목 -->
+	<insert id="insertBoard" parameterType="myboard">
+		INSERT INTO myboard (seq,title,writer,content)
+		VALUES ( ( SELECT nvl(max(seq),0)+1 from myboard), #{title},#{writer},#{content})
+	</insert>
+	
+	<update id="updateBoard" parameterType="myboard">
+		UPDATE myboard
+		SET title = #{title},
+			content = #{content}
+		WHERE seq=#{seq}
+	</update>
+	
+	<delete id="deleteBoard" parameterType="myboard">
+		DELETE FROM myboard WHERE SEQ = #{seq}
+	</delete>
+	
+	<select id="getBoard" parameterType="myboard" resultType="myboard">
+		SELECT *
+		FROM myboard
+		WHERE seq = #{seq}
+	</select>
+	
+	<select id="getBoardList" parameterType="myboard" resultType="myboard">
+		SELECT * FROM myboard
+		WHERE title LIKE '%'||#{searchKeyword}||'%'
+		ORDER BY seq desc
+	</select>
+<!-- private final String BOARD_INSERT = "insert into myboard(seq, title, writer, content) "
+			+ "values((select nvl(max(seq),0)+1 from myboard),?,?,?)";
+	private final String BOARD_UPDATE = "update myboard set title = ?,content = ? where seq = ?";
+	private final String BOARD_DELETE = "delete myboard where seq = ?";
+	private final String BOARD_GET = "select * from myboard where seq = ?";
+	private final String BOARD_LIST = "select * from myboard order by seq desc";
+	//쿼리문 추가(검색기능)
+	private final String BOARD_LIST_T = "select * from myboard where title like '%'||?||'%' order by seq desc";
+	private final String BOARD_LIST_C = "select * from myboard where content like '%'||?||'%' order by seq desc"; -->
+
+</mapper>

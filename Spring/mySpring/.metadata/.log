@@ -5178,3 +5178,741 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-02-05 08:57:35.225 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_241
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-02-05 08:58:24.417
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-02-05 08:58:24.417
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c502018,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58c93be3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-02-05 08:58:54.387
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2020-02-05 09:25:16.964
+!MESSAGE Unexpected interrupt while waiting on ECF browse request
+!STACK 0
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.Semaphore.acquire(Semaphore.java:44)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:914)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:344)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:547)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.waitOnSelf(FileInfoReader.java:74)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:110)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:249)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.delegateGetLastModified(CachingTransport.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.getLastModified(CachingTransport.java:345)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:192)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$12(MarketplaceCatalog.java:321)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2020-02-05 09:25:17.007
+!MESSAGE Unexpected interrupt while waiting on ECF browse request
+!STACK 0
+java.lang.InterruptedException
+	at org.eclipse.core.internal.jobs.Semaphore.acquire(Semaphore.java:34)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:914)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:344)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:547)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.waitOnSelf(FileInfoReader.java:74)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:110)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:249)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.delegateGetLastModified(CachingTransport.java:396)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.getLastModified(CachingTransport.java:345)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:192)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:775)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$12(MarketplaceCatalog.java:321)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SESSION 2020-02-05 09:26:46.031 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_241
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/C:/myProject/mySpring/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-02-05 09:26:56.082
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-02-05 09:26:56.082
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@26c24e5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29509774,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-02-05 09:27:06.050
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-02-05 12:45:50.370 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_241
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-02-05 12:45:56.286
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-02-05 12:45:56.286
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2fb555e8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19a544cd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-02-05 12:46:05.611
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\chris'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 4 0 2020-02-05 15:07:05.631
+!MESSAGE java.lang.IllegalArgumentException: Comparison method violates its general contract!
+Workaround for comparator violation:
+	Set system property -Djava.util.Arrays.useLegacyMergeSort=true
+this: org.eclipse.ui.internal.progress.BlockedJobsDialog$2
+comparator: null
+array:
+	org.eclipse.ui.internal.progress.JobInfo@5a3493a6
+	org.eclipse.ui.internal.progress.JobInfo@22c8515e
+	org.eclipse.ui.internal.progress.JobInfo@1c0b7eeb
+	org.eclipse.ui.internal.progress.JobInfo@1882780c
+	org.eclipse.ui.internal.progress.JobInfo@274f8bb1
+	org.eclipse.ui.internal.progress.JobInfo@978f2dc
+	org.eclipse.ui.internal.progress.JobInfo@1d3fbe4a
+	org.eclipse.ui.internal.progress.JobInfo@266b9280
+	org.eclipse.ui.internal.progress.JobInfo@88e5556
+	org.eclipse.ui.internal.progress.JobInfo@69373e09
+	org.eclipse.ui.internal.progress.JobInfo@68c3598a
+	org.eclipse.ui.internal.progress.JobInfo@4182057c
+	org.eclipse.ui.internal.progress.JobInfo@1995e4f3
+	org.eclipse.ui.internal.progress.JobInfo@251dfaff
+	org.eclipse.ui.internal.progress.JobInfo@1a4fe9a
+	org.eclipse.ui.internal.progress.JobInfo@12aa7b3f
+	org.eclipse.ui.internal.progress.JobInfo@676c3798
+	org.eclipse.ui.internal.progress.JobInfo@684ae93f
+	org.eclipse.ui.internal.progress.JobInfo@4a9a8015
+	org.eclipse.ui.internal.progress.JobInfo@6553f76a
+	org.eclipse.ui.internal.progress.JobInfo@46a0dcd0
+	org.eclipse.ui.internal.progress.JobInfo@3d59df51
+	org.eclipse.ui.internal.progress.JobInfo@6154904c
+	org.eclipse.ui.internal.progress.JobInfo@70fc0d8
+	org.eclipse.ui.internal.progress.JobInfo@d543a34
+	org.eclipse.ui.internal.progress.JobInfo@49b612c5
+	org.eclipse.ui.internal.progress.JobInfo@334dcc55
+	org.eclipse.ui.internal.progress.JobInfo@3ea5660
+	org.eclipse.ui.internal.progress.JobInfo@740e43ae
+	org.eclipse.ui.internal.progress.JobInfo@6dd8fa56
+	org.eclipse.ui.internal.progress.JobInfo@943105c
+	org.eclipse.ui.internal.progress.JobInfo@1f90d509
+	org.eclipse.ui.internal.progress.JobInfo@2f74f89b
+	org.eclipse.ui.internal.progress.JobInfo@bd67c75
+	org.eclipse.ui.internal.progress.JobInfo@65432fb4
+	org.eclipse.ui.internal.progress.JobInfo@61f84b76
+	org.eclipse.ui.internal.progress.JobInfo@16b4218c
+	org.eclipse.ui.internal.progress.JobInfo@7b864e8b
+	org.eclipse.ui.internal.progress.JobInfo@1b3f5758
+	org.eclipse.ui.internal.progress.JobInfo@10c2de7e
+	org.eclipse.ui.internal.progress.JobInfo@42cd0291
+	org.eclipse.ui.internal.progress.JobInfo@675600a8
+	org.eclipse.ui.internal.progress.JobInfo@36a8e060
+	org.eclipse.ui.internal.progress.JobInfo@b9f1f91
+	org.eclipse.ui.internal.progress.JobInfo@7d11f7b2
+	org.eclipse.ui.internal.progress.JobInfo@784eb4c2
+	org.eclipse.ui.internal.progress.JobInfo@6b6c6076
+	org.eclipse.ui.internal.progress.JobInfo@3baf83b6
+	org.eclipse.ui.internal.progress.JobInfo@3c16b759
+	org.eclipse.ui.internal.progress.JobInfo@387a5d16
+	org.eclipse.ui.internal.progress.JobInfo@3bb5198c
+	org.eclipse.ui.internal.progress.JobInfo@2d8cf9e
+	org.eclipse.ui.internal.progress.JobInfo@725ecf27
+	org.eclipse.ui.internal.progress.JobInfo@60e72ab1
+	org.eclipse.ui.internal.progress.JobInfo@72df28e4
+	org.eclipse.ui.internal.progress.JobInfo@133d1397
+	org.eclipse.ui.internal.progress.JobInfo@27b98031
+	org.eclipse.ui.internal.progress.JobInfo@7bab6af6
+	org.eclipse.ui.internal.progress.JobInfo@1df453fa
+	org.eclipse.ui.internal.progress.JobInfo@70752308
+	org.eclipse.ui.internal.progress.JobInfo@23aefd06
+	org.eclipse.ui.internal.progress.JobInfo@7bcf5a29
+	org.eclipse.ui.internal.progress.JobInfo@3e31490c
+	org.eclipse.ui.internal.progress.JobInfo@5e192d0d
+	org.eclipse.ui.internal.progress.JobInfo@1356ecd4
+	org.eclipse.ui.internal.progress.JobInfo@47517ae5
+	org.eclipse.ui.internal.progress.JobInfo@90c02fa
+	org.eclipse.ui.internal.progress.JobInfo@ec642b1
+	org.eclipse.ui.internal.progress.JobInfo@53d9ff51
+	org.eclipse.ui.internal.progress.JobInfo@43364531
+	org.eclipse.ui.internal.progress.JobInfo@40a5b6f2
+	org.eclipse.ui.internal.progress.JobInfo@3ab06615
+	org.eclipse.ui.internal.progress.JobInfo@584803b
+	org.eclipse.ui.internal.progress.JobInfo@c5eb2ff
+	org.eclipse.ui.internal.progress.JobInfo@69b5ffe3
+	org.eclipse.ui.internal.progress.JobInfo@282a0d65
+	org.eclipse.ui.internal.progress.JobInfo@2ebbe349
+	org.eclipse.ui.internal.progress.JobInfo@46ed4f3a
+	org.eclipse.ui.internal.progress.JobInfo@12e16773
+	org.eclipse.ui.internal.progress.JobInfo@19d2c885
+	org.eclipse.ui.internal.progress.JobInfo@3ab52b82
+	org.eclipse.ui.internal.progress.JobInfo@58e4e279
+	org.eclipse.ui.internal.progress.JobInfo@64dc6408
+	org.eclipse.ui.internal.progress.JobInfo@20942137
+	org.eclipse.ui.internal.progress.JobInfo@2c306c4a
+	org.eclipse.ui.internal.progress.JobInfo@24f21350
+	org.eclipse.ui.internal.progress.JobInfo@660f3502
+	org.eclipse.ui.internal.progress.BlockedJobsDialog$BlockedUIElement@4c33bfec
+	org.eclipse.ui.internal.progress.JobInfo@521fe416
+	org.eclipse.ui.internal.progress.JobInfo@7d599522
+	org.eclipse.ui.internal.progress.JobInfo@79c3a934
+	org.eclipse.ui.internal.progress.JobInfo@60de4763
+	org.eclipse.ui.internal.progress.JobInfo@76a1060a
+	org.eclipse.ui.internal.progress.JobInfo@2bc9abfe
+	org.eclipse.ui.internal.progress.JobInfo@5410315f
+	org.eclipse.ui.internal.progress.JobInfo@54e210bb
+	org.eclipse.ui.internal.progress.JobInfo@1984a52c
+	org.eclipse.ui.internal.progress.JobInfo@d15cc22
+	org.eclipse.ui.internal.progress.JobInfo@a6a184b
+	org.eclipse.ui.internal.progress.JobInfo@36337b16
+	org.eclipse.ui.internal.progress.JobInfo@481f2641
+	org.eclipse.ui.internal.progress.JobInfo@4839d7c9
+	org.eclipse.ui.internal.progress.JobInfo@acf8735
+	org.eclipse.ui.internal.progress.JobInfo@5399477
+	org.eclipse.ui.internal.progress.JobInfo@764b8cb7
+	org.eclipse.ui.internal.progress.JobInfo@42d91d21
+	org.eclipse.ui.internal.progress.JobInfo@3e1c3a1b
+	org.eclipse.ui.internal.progress.JobInfo@6c08f68b
+	org.eclipse.ui.internal.progress.JobInfo@25343e0e
+	org.eclipse.ui.internal.progress.JobInfo@41853493
+	org.eclipse.ui.internal.progress.JobInfo@6cba55d
+	org.eclipse.ui.internal.progress.JobInfo@502379b7
+	org.eclipse.ui.internal.progress.JobInfo@2a3a2e65
+	org.eclipse.ui.internal.progress.JobInfo@10226ee8
+	org.eclipse.ui.internal.progress.JobInfo@63cdf039
+	org.eclipse.ui.internal.progress.JobInfo@1ab7981
+	org.eclipse.ui.internal.progress.JobInfo@21ef2922
+	org.eclipse.ui.internal.progress.JobInfo@b2c4f43
+	org.eclipse.ui.internal.progress.JobInfo@782cf3c
+	org.eclipse.ui.internal.progress.JobInfo@1fb7ea56
+	org.eclipse.ui.internal.progress.JobInfo@5d0489d9
+	org.eclipse.ui.internal.progress.JobInfo@5a6befd5
+	org.eclipse.ui.internal.progress.JobInfo@63bc39
+	org.eclipse.ui.internal.progress.JobInfo@5195dd2b
+	org.eclipse.ui.internal.progress.JobInfo@3020aee1
+	org.eclipse.ui.internal.progress.JobInfo@6c3fd4e8
+	org.eclipse.ui.internal.progress.JobInfo@66d55e8d
+	org.eclipse.ui.internal.progress.JobInfo@cc2c5d7
+	org.eclipse.ui.internal.progress.JobInfo@5ee800bc
+	org.eclipse.ui.internal.progress.JobInfo@4c56d563
+	org.eclipse.ui.internal.progress.JobInfo@72bb0899
+	org.eclipse.ui.internal.progress.JobInfo@50d1244
+	org.eclipse.ui.internal.progress.JobInfo@786fe958
+	org.eclipse.ui.internal.progress.JobInfo@334b0841
+	org.eclipse.ui.internal.progress.JobInfo@26822700
+	org.eclipse.ui.internal.progress.JobInfo@14d88924
+	org.eclipse.ui.internal.progress.JobInfo@6921c0c9
+	org.eclipse.ui.internal.progress.JobInfo@505a02ca
+	org.eclipse.ui.internal.progress.JobInfo@1834fe6f
+	org.eclipse.ui.internal.progress.JobInfo@5eafe31d
+	org.eclipse.ui.internal.progress.JobInfo@52bf3619
+	org.eclipse.ui.internal.progress.JobInfo@2dbcfc0
+	org.eclipse.ui.internal.progress.JobInfo@22fb51b2
+	org.eclipse.ui.internal.progress.JobInfo@515ce01a
+	org.eclipse.ui.internal.progress.JobInfo@2895bc16
+	org.eclipse.ui.internal.progress.JobInfo@1c3ad403
+	org.eclipse.ui.internal.progress.JobInfo@69a2ca34
+	org.eclipse.ui.internal.progress.JobInfo@c5c7d3e
+	org.eclipse.ui.internal.progress.JobInfo@67355dc8
+	org.eclipse.ui.internal.progress.JobInfo@1a86ade6
+	org.eclipse.ui.internal.progress.JobInfo@1dfa6a3f
+	org.eclipse.ui.internal.progress.JobInfo@2844b830
+	org.eclipse.ui.internal.progress.JobInfo@25676ba
+	org.eclipse.ui.internal.progress.JobInfo@2cd27d43
+	org.eclipse.ui.internal.progress.JobInfo@67a62dc8
+	org.eclipse.ui.internal.progress.JobInfo@1aadaaf0
+	org.eclipse.ui.internal.progress.JobInfo@4a9e1bce
+	org.eclipse.ui.internal.progress.JobInfo@77918e6f
+	org.eclipse.ui.internal.progress.JobInfo@60ce2874
+	org.eclipse.ui.internal.progress.JobInfo@3d52dd65
+	org.eclipse.ui.internal.progress.JobInfo@339fe565
+	org.eclipse.ui.internal.progress.JobInfo@319d6067
+	org.eclipse.ui.internal.progress.JobInfo@479ed73a
+	org.eclipse.ui.internal.progress.JobInfo@3f4e31da
+	org.eclipse.ui.internal.progress.JobInfo@55f68a9f
+	org.eclipse.ui.internal.progress.JobInfo@7648020a
+	org.eclipse.ui.internal.progress.JobInfo@535d8060
+	org.eclipse.ui.internal.progress.JobInfo@43a85141
+	org.eclipse.ui.internal.progress.JobInfo@e1cfc53
+	org.eclipse.ui.internal.progress.JobInfo@eb76757
+	org.eclipse.ui.internal.progress.JobInfo@22470fbd
+	org.eclipse.ui.internal.progress.JobInfo@78c28219
+	org.eclipse.ui.internal.progress.JobInfo@6b8af53e
+	org.eclipse.ui.internal.progress.JobInfo@41387a9a
+	org.eclipse.ui.internal.progress.JobInfo@6b090e08
+	org.eclipse.ui.internal.progress.JobInfo@2124e148
+	org.eclipse.ui.internal.progress.JobInfo@724c9231
+	org.eclipse.ui.internal.progress.JobInfo@1ff0ce50
+	org.eclipse.ui.internal.progress.JobInfo@2a4c793b
+	org.eclipse.ui.internal.progress.JobInfo@754085da
+	org.eclipse.ui.internal.progress.JobInfo@36a7882f
+	org.eclipse.ui.internal.progress.JobInfo@5fd0a6bc
+	org.eclipse.ui.internal.progress.JobInfo@4e19a81d
+	org.eclipse.ui.internal.progress.JobInfo@60375b8c
+	org.eclipse.ui.internal.progress.JobInfo@5668dab3
+	org.eclipse.ui.internal.progress.JobInfo@6abdbcb3
+	org.eclipse.ui.internal.progress.JobInfo@72a8611f
+	org.eclipse.ui.internal.progress.JobInfo@167650e6
+	org.eclipse.ui.internal.progress.JobInfo@3a60e938
+	org.eclipse.ui.internal.progress.JobInfo@50f8acbc
+	org.eclipse.ui.internal.progress.JobInfo@343a4bf0
+	org.eclipse.ui.internal.progress.JobInfo@56f17ec
+	org.eclipse.ui.internal.progress.JobInfo@7ac1aaba
+	org.eclipse.ui.internal.progress.JobInfo@2449c616
+	org.eclipse.ui.internal.progress.JobInfo@2343abab
+	org.eclipse.ui.internal.progress.JobInfo@267c2240
+	org.eclipse.ui.internal.progress.JobInfo@63532885
+	org.eclipse.ui.internal.progress.JobInfo@7b808a49
+	org.eclipse.ui.internal.progress.JobInfo@e22f8cf
+	org.eclipse.ui.internal.progress.JobInfo@2bbda82e
+	org.eclipse.ui.internal.progress.JobInfo@3ad79692
+	org.eclipse.ui.internal.progress.JobInfo@54ef9400
+	org.eclipse.ui.internal.progress.JobInfo@28b4a824
+	org.eclipse.ui.internal.progress.JobInfo@4f99f499
+	org.eclipse.ui.internal.progress.JobInfo@47a54077
+	org.eclipse.ui.internal.progress.JobInfo@e06ffdf
+	org.eclipse.ui.internal.progress.JobInfo@48516638
+	org.eclipse.ui.internal.progress.JobInfo@3233bd74
+	org.eclipse.ui.internal.progress.JobInfo@6af0e547
+	org.eclipse.ui.internal.progress.JobInfo@318a6fce
+	org.eclipse.ui.internal.progress.JobInfo@3c4569c2
+	org.eclipse.ui.internal.progress.JobInfo@34c838cb
+	org.eclipse.ui.internal.progress.JobInfo@76a2efbb
+	org.eclipse.ui.internal.progress.JobInfo@31c9e841
+	org.eclipse.ui.internal.progress.JobInfo@4f1ce78c
+	org.eclipse.ui.internal.progress.JobInfo@55191365
+	org.eclipse.ui.internal.progress.JobInfo@5052bd21
+	org.eclipse.ui.internal.progress.JobInfo@3aee06b5
+	org.eclipse.ui.internal.progress.JobInfo@5667aa32
+	org.eclipse.ui.internal.progress.JobInfo@7d7ad76f
+	org.eclipse.ui.internal.progress.JobInfo@3dcdcbd3
+	org.eclipse.ui.internal.progress.JobInfo@66cc7a7a
+	org.eclipse.ui.internal.progress.JobInfo@3f94284
+	org.eclipse.ui.internal.progress.JobInfo@fe33b9b
+	org.eclipse.ui.internal.progress.JobInfo@79d8721f
+	org.eclipse.ui.internal.progress.JobInfo@616e9a9a
+	org.eclipse.ui.internal.progress.JobInfo@14686f1
+	org.eclipse.ui.internal.progress.JobInfo@2f436008
+	org.eclipse.ui.internal.progress.JobInfo@65d82bf6
+	org.eclipse.ui.internal.progress.JobInfo@24503263
+	org.eclipse.ui.internal.progress.JobInfo@53c6b8d9
+	org.eclipse.ui.internal.progress.JobInfo@1950ff6d
+	org.eclipse.ui.internal.progress.JobInfo@1fb089ab
+	org.eclipse.ui.internal.progress.JobInfo@31e1d7a
+	org.eclipse.ui.internal.progress.JobInfo@162dcc8e
+	org.eclipse.ui.internal.progress.JobInfo@3ce9c56c
+	org.eclipse.ui.internal.progress.JobInfo@6cc1b75d
+	org.eclipse.ui.internal.progress.JobInfo@43753330
+	org.eclipse.ui.internal.progress.JobInfo@3e7f8877
+	org.eclipse.ui.internal.progress.JobInfo@2ce5c660
+	org.eclipse.ui.internal.progress.JobInfo@3f9fc4dd
+	org.eclipse.ui.internal.progress.JobInfo@723c5aa7
+	org.eclipse.ui.internal.progress.JobInfo@5b92d76
+	org.eclipse.ui.internal.progress.JobInfo@56ff0d3
+	org.eclipse.ui.internal.progress.JobInfo@374cdf33
+	org.eclipse.ui.internal.progress.JobInfo@3d920a5e
+	org.eclipse.ui.internal.progress.JobInfo@5855c70
+	org.eclipse.ui.internal.progress.JobInfo@218ef49e
+	org.eclipse.ui.internal.progress.JobInfo@de813ed
+	org.eclipse.ui.internal.progress.JobInfo@3e5084b5
+	org.eclipse.ui.internal.progress.JobInfo@5372a0af
+	org.eclipse.ui.internal.progress.JobInfo@21923152
+	org.eclipse.ui.internal.progress.JobInfo@27aa2f8a
+	org.eclipse.ui.internal.progress.JobInfo@12fb8739
+	org.eclipse.ui.internal.progress.JobInfo@1ce447e8
+	org.eclipse.ui.internal.progress.JobInfo@422699db
+	org.eclipse.ui.internal.progress.JobInfo@5dc4a3b3
+	org.eclipse.ui.internal.progress.JobInfo@6a66f3c1
+	org.eclipse.ui.internal.progress.JobInfo@62c35c3c
+	org.eclipse.ui.internal.progress.JobInfo@14bd4534
+	org.eclipse.ui.internal.progress.JobInfo@47fa7430
+	org.eclipse.ui.internal.progress.JobInfo@68fe1a87
+	org.eclipse.ui.internal.progress.JobInfo@5679b766
+	org.eclipse.ui.internal.progress.JobInfo@757dbfee
+	org.eclipse.ui.internal.progress.JobInfo@45ee6f66
+	org.eclipse.ui.internal.progress.JobInfo@64f77b1b
+	org.eclipse.ui.internal.progress.JobInfo@659149d9
+	org.eclipse.ui.internal.progress.JobInfo@ee3875c
+	org.eclipse.ui.internal.progress.JobInfo@21df7bda
+	org.eclipse.ui.internal.progress.JobInfo@18f19caf
+	org.eclipse.ui.internal.progress.JobInfo@2f9344d0
+	org.eclipse.ui.internal.progress.JobInfo@1f6a2ab
+	org.eclipse.ui.internal.progress.JobInfo@78dcf0a8
+	org.eclipse.ui.internal.progress.JobInfo@6e66d06
+	org.eclipse.ui.internal.progress.JobInfo@508f87c3
+	org.eclipse.ui.internal.progress.JobInfo@870db54
+	org.eclipse.ui.internal.progress.JobInfo@17f1bbdc
+	org.eclipse.ui.internal.progress.JobInfo@6e530e2b
+	org.eclipse.ui.internal.progress.JobInfo@537160c5
+	org.eclipse.ui.internal.progress.JobInfo@67c9392d
+	org.eclipse.ui.internal.progress.JobInfo@24e80c30
+	org.eclipse.ui.internal.progress.JobInfo@370363ff
+	org.eclipse.ui.internal.progress.JobInfo@80d19b8
+	org.eclipse.ui.internal.progress.JobInfo@7917ceca
+	org.eclipse.ui.internal.progress.JobInfo@6a3b9320
+	org.eclipse.ui.internal.progress.JobInfo@576016eb
+	org.eclipse.ui.internal.progress.JobInfo@4f1eb42a
+	org.eclipse.ui.internal.progress.JobInfo@272315c2
+	org.eclipse.ui.internal.progress.JobInfo@72c5c491
+	org.eclipse.ui.internal.progress.JobInfo@7b7aff18
+	org.eclipse.ui.internal.progress.JobInfo@796e3e20
+	org.eclipse.ui.internal.progress.JobInfo@4e87e778
+	org.eclipse.ui.internal.progress.JobInfo@51540c70
+	org.eclipse.ui.internal.progress.JobInfo@43c45876
+	org.eclipse.ui.internal.progress.JobInfo@13a50466
+	org.eclipse.ui.internal.progress.JobInfo@4a011c12
+	org.eclipse.ui.internal.progress.JobInfo@2e93e20f
+	org.eclipse.ui.internal.progress.JobInfo@46a4f9d0
+	org.eclipse.ui.internal.progress.JobInfo@241e5e63
+	org.eclipse.ui.internal.progress.JobInfo@5b3d3366
+	org.eclipse.ui.internal.progress.JobInfo@7ad6a4df
+	org.eclipse.ui.internal.progress.JobInfo@1b1c7809
+	org.eclipse.ui.internal.progress.JobInfo@d459855
+	org.eclipse.ui.internal.progress.JobInfo@5c58ff42
+	org.eclipse.ui.internal.progress.JobInfo@72706f4f
+	org.eclipse.ui.internal.progress.JobInfo@405b8fae
+	org.eclipse.ui.internal.progress.JobInfo@4e0d828c
+	org.eclipse.ui.internal.progress.JobInfo@46f6d7a5
+	org.eclipse.ui.internal.progress.JobInfo@4d7c1065
+	org.eclipse.ui.internal.progress.JobInfo@6aac4fc
+	org.eclipse.ui.internal.progress.JobInfo@75f6cd5d
+	org.eclipse.ui.internal.progress.JobInfo@3bc04906
+	org.eclipse.ui.internal.progress.JobInfo@1f0996cb
+	org.eclipse.ui.internal.progress.JobInfo@1a13394e
+	org.eclipse.ui.internal.progress.JobInfo@3b0122dc
+	org.eclipse.ui.internal.progress.JobInfo@7643596f
+	org.eclipse.ui.internal.progress.JobInfo@65e7f36f
+	org.eclipse.ui.internal.progress.JobInfo@41b39fe9
+	org.eclipse.ui.internal.progress.JobInfo@1b7f1e3a
+	org.eclipse.ui.internal.progress.JobInfo@6af010f0
+	org.eclipse.ui.internal.progress.JobInfo@40a064a6
+	org.eclipse.ui.internal.progress.JobInfo@6d6a82db
+	org.eclipse.ui.internal.progress.JobInfo@6e9f7f0e
+	org.eclipse.ui.internal.progress.JobInfo@65effcac
+	org.eclipse.ui.internal.progress.JobInfo@2a4bdd36
+	org.eclipse.ui.internal.progress.JobInfo@5692c9a1
+	org.eclipse.ui.internal.progress.JobInfo@6b86465b
+	org.eclipse.ui.internal.progress.JobInfo@1b51b4f3
+	org.eclipse.ui.internal.progress.JobInfo@103f7eb9
+	org.eclipse.ui.internal.progress.JobInfo@3a773611
+	org.eclipse.ui.internal.progress.JobInfo@659776eb
+	org.eclipse.ui.internal.progress.JobInfo@401dd2f
+	org.eclipse.ui.internal.progress.JobInfo@2510d7a5
+	org.eclipse.ui.internal.progress.JobInfo@361f2135
+	org.eclipse.ui.internal.progress.JobInfo@54b95c39
+	org.eclipse.ui.internal.progress.JobInfo@2222f162
+	org.eclipse.ui.internal.progress.JobInfo@3b2dcf4d
+	org.eclipse.ui.internal.progress.JobInfo@10152e5c
+	org.eclipse.ui.internal.progress.JobInfo@25edca34
+	org.eclipse.ui.internal.progress.JobInfo@525bc3c1
+	org.eclipse.ui.internal.progress.JobInfo@c0ed814
+	org.eclipse.ui.internal.progress.JobInfo@1c2ddfe6
+	org.eclipse.ui.internal.progress.JobInfo@2d9cf9f
+	org.eclipse.ui.internal.progress.JobInfo@25112131
+	org.eclipse.ui.internal.progress.JobInfo@5a0a993c
+	org.eclipse.ui.internal.progress.JobInfo@993ac39
+	org.eclipse.ui.internal.progress.JobInfo@3ccfb5e1
+	org.eclipse.ui.internal.progress.JobInfo@3bffdbcc
+	org.eclipse.ui.internal.progress.JobInfo@7191213b
+	org.eclipse.ui.internal.progress.JobInfo@7676a30
+	org.eclipse.ui.internal.progress.JobInfo@790ff31f
+	org.eclipse.ui.internal.progress.JobInfo@54b4d657
+	org.eclipse.ui.internal.progress.JobInfo@12acc092
+	org.eclipse.ui.internal.progress.JobInfo@44b2bb4
+	org.eclipse.ui.internal.progress.JobInfo@78ab3ded
+	org.eclipse.ui.internal.progress.JobInfo@6bc375b7
+	org.eclipse.ui.internal.progress.JobInfo@63b51d7f
+	org.eclipse.ui.internal.progress.JobInfo@2b8f09b3
+	org.eclipse.ui.internal.progress.JobInfo@5cb24cc0
+	org.eclipse.ui.internal.progress.JobInfo@6b952bc9
+	org.eclipse.ui.internal.progress.JobInfo@6b5d283f
+	org.eclipse.ui.internal.progress.JobInfo@32034e74
+	org.eclipse.ui.internal.progress.JobInfo@d9a98d2
+	org.eclipse.ui.internal.progress.JobInfo@59aa77b8
+	org.eclipse.ui.internal.progress.JobInfo@649f08f5
+	org.eclipse.ui.internal.progress.JobInfo@860dfcb
+	org.eclipse.ui.internal.progress.JobInfo@45ba2720
+	org.eclipse.ui.internal.progress.JobInfo@213f1e10
+	org.eclipse.ui.internal.progress.JobInfo@6d13bed1
+	org.eclipse.ui.internal.progress.JobInfo@2c8b9f95
+	org.eclipse.ui.internal.progress.JobInfo@7782547f
+	org.eclipse.ui.internal.progress.JobInfo@7191b8e6
+	org.eclipse.ui.internal.progress.JobInfo@435f67d1
+	org.eclipse.ui.internal.progress.JobInfo@4c4d06
+	org.eclipse.ui.internal.progress.JobInfo@5a766147
+	org.eclipse.ui.internal.progress.JobInfo@67e4f1c8
+	org.eclipse.ui.internal.progress.JobInfo@32f15b43
+	org.eclipse.ui.internal.progress.JobInfo@19b18b7e
+	org.eclipse.ui.internal.progress.JobInfo@4ebcfe8e
+	org.eclipse.ui.internal.progress.JobInfo@1b8bf84b
+	org.eclipse.ui.internal.progress.JobInfo@418eb546
+	org.eclipse.ui.internal.progress.JobInfo@29e4c929
+	org.eclipse.ui.internal.progress.JobInfo@3e2af547
+	org.eclipse.ui.internal.progress.JobInfo@1ad5e432
+	org.eclipse.ui.internal.progress.JobInfo@5c63ce6d
+	org.eclipse.ui.internal.progress.JobInfo@6b777320
+	org.eclipse.ui.internal.progress.JobInfo@4b3ca58f
+	org.eclipse.ui.internal.progress.JobInfo@260a29ab
+	org.eclipse.ui.internal.progress.JobInfo@27137e29
+	org.eclipse.ui.internal.progress.JobInfo@2b419a46
+	org.eclipse.ui.internal.progress.JobInfo@1200edb9
+	org.eclipse.ui.internal.progress.JobInfo@2e8181bd
+	org.eclipse.ui.internal.progress.JobInfo@381f67e2
+	org.eclipse.ui.internal.progress.JobInfo@531905a1
+	org.eclipse.ui.internal.progress.JobInfo@9dae349
+
+!ENTRY org.eclipse.ui 4 0 2020-02-05 15:07:05.649
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.TimSort.mergeHi(Unknown Source)
+	at java.util.TimSort.mergeAt(Unknown Source)
+	at java.util.TimSort.mergeCollapse(Unknown Source)
+	at java.util.TimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.jface.viewers.ViewerComparator.sort(ViewerComparator.java:206)
+	at org.eclipse.jface.viewers.StructuredViewer.getSortedChildren(StructuredViewer.java:1029)
+	at org.eclipse.ui.internal.progress.DetailedProgressViewer.refreshAll(DetailedProgressViewer.java:440)
+	at org.eclipse.ui.internal.progress.DetailedProgressViewer.inputChanged(DetailedProgressViewer.java:346)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:282)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1627)
+	at org.eclipse.ui.internal.progress.BlockedJobsDialog.showJobDetails(BlockedJobsDialog.java:235)
+	at org.eclipse.ui.internal.progress.BlockedJobsDialog.createDialogArea(BlockedJobsDialog.java:214)
+	at org.eclipse.jface.dialogs.IconAndMessageDialog.createDialogAndButtonArea(IconAndMessageDialog.java:227)
+	at org.eclipse.jface.dialogs.IconAndMessageDialog.createContents(IconAndMessageDialog.java:206)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at org.eclipse.ui.internal.progress.BlockedJobsDialog.createBlockedDialog(BlockedJobsDialog.java:169)
+	at org.eclipse.ui.internal.dialogs.WorkbenchDialogBlockedHandler.showBlocked(WorkbenchDialogBlockedHandler.java:65)
+	at org.eclipse.ui.internal.progress.ProgressManager$RunnableWithStatus$1.setBlocked(ProgressManager.java:1118)
+	at org.eclipse.core.internal.jobs.JobManager.reportBlocked(JobManager.java:1179)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitStart(ThreadJob.java:500)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:253)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:205)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:95)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:298)
+	at org.eclipse.ui.internal.progress.ProgressManager$RunnableWithStatus.run(ProgressManager.java:1094)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.progress.ProgressManager.lambda$25(ProgressManager.java:974)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:146)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4629)
+	at org.eclipse.ui.internal.progress.ProgressManager.runInUI(ProgressManager.java:974)
+	at org.eclipse.jdt.ui.actions.OrganizeImportsAction.run(OrganizeImportsAction.java:287)
+	at org.eclipse.jdt.ui.actions.OrganizeImportsAction.run(OrganizeImportsAction.java:199)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:278)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:252)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at sun.reflect.GeneratedMethodAccessor146.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:318)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:252)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1104)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1491)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4881)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:353)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4759)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4819)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)

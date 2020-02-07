@@ -1,0 +1,28 @@
+package chris.spring.web.board.impl;
+
+import org.apache.ibatis.session.SqlSession;
+
+import chris.spring.web.board.BoardVO;
+import chris.spring.web.util.SqlSessionFactoryBean;
+
+public class BoardDAO {
+
+	private SqlSession sqlSession;
+	public BoardDAO() {
+		sqlSession = SqlSessionFactoryBean.getSqlSessionInstance();
+	}
+	public void insertBoard(BoardVO vo) {
+		sqlSession.insert("BoardDAO.insertBoard",vo);
+	}
+	public void updateBoard(BoardVO vo) {
+		sqlSession.update("BoardDAO.updateBoard",vo);
+	}
+	public void deleteBoard(BoardVO vo) {
+		sqlSession.delete("BoardDAO.deleteBoard",vo);
+	}
+	public void getBoard(BoardVO vo) {
+		return sqlSession.selectOne("BoardDAO.getBoard",vo);
+	}
+	
+	
+}

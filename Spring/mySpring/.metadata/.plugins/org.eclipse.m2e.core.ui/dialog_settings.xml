@@ -38,6 +38,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="chris.spring.mybatis"/>
 			<item value="chris.spring.tx"/>
 			<item value="chris.spring.mytest"/>
 		</list>
@@ -45,6 +46,7 @@
 			<item value="chris.spring"/>
 		</list>
 		<list key="artifactId">
+			<item value="MyBatisProject"/>
 			<item value="SpringTX"/>
 			<item value="MyTest"/>
 		</list>

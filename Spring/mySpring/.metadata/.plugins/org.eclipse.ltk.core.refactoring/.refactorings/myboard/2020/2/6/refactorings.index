@@ -3,3 +3,6 @@
 1580692593371	Delete element
 1580697003682	Delete elements
 1580784140243	Delete element
+1580875109359	Move 'mybatis-config.xml' to 'resources'
+1580876050802	Delete element
+1580876255457	Move 'board-mapping.xml' to 'mappings'

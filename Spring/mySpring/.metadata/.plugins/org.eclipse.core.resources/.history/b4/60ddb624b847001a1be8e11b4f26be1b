@@ -1,0 +1,21 @@
+package chris.spring.web.util;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public class SqlSessionFactoryBean {
+
+	//getConnection과 같은 개념
+	
+	private static SqlSessionFactory sessionFactory = null;
+	
+	static {
+		try {
+			if(sessionFactory == null) {
+				Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
+			}
+		}
+	}
+	
+	
+}

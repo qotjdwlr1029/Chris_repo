@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import chris.spring.web.board.BoardService;
 import chris.spring.web.board.BoardVO;
 
-/*
+
 @Service("boardService")		//XXXController 사용자 요청을 제어하는 Controller클래스
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
-	private BoardDAOSpring boardDAO;
+	private BoardDAO boardDAO;
 	
 	@Override
 	public void insertBoard(BoardVO vo) {
@@ -44,4 +44,3 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 }
-*/

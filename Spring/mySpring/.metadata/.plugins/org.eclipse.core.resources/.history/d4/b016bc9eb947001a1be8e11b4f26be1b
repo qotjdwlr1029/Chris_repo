@@ -1,0 +1,36 @@
+package chris.spring.web.board.impl;
+
+import org.apache.ibatis.session.SqlSession;
+
+import chris.spring.web.board.BoardVO;
+import chris.spring.web.util.SqlSessionFactoryBean;
+
+public class BoardDAO {
+
+	private SqlSession sqlSession;
+
+	public BoardDAO() {
+		sqlSession = SqlSessionFactoryBean.getSqlSessionInstance();	//내가 만든거로부터 세션을 얻어옴
+	}
+	
+	public void insertBoard(BoardVO vo) {
+		//board-mapping.xml로부터 설정한 값 "BoardDAO.insertBoard"
+		sqlSession.insert("BoardDAO.insertBoard",vo);
+	}
+	
+	public void updateBoard(BoardVO vo) {
+		sqlSession.update("BoardDAO.updateBoard",vo);
+	}
+	
+	public void deleteBoard(BoardVO vo) {
+		sqlSession.delete("BoardDAO.deleteBoard",vo);
+	}
+	
+	public BoardVO getBoard(BoardVO vo) {
+		return sqlSession.selectOne("BoardDAO.getBoard", vo);
+	}
+	
+	public List<BoardVO> getBoardList(BoardVO vo){
+		return sqlSession.selectList("BoardDAO.getBoardList",vo);
+	}
+}

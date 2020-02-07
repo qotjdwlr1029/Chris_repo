@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   
+  	<!-- 리스너 자체로는 그 기능을 하지 못하기 때문에 <context-param>의 값을 넣어준다.(이로써 파일을 읽어들인다.) -->
+  	<context-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>classpath:applicationContext.xml</param-value>
+  	</context-param>
+  	<listener>
+  		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  	</listener>
+  	<!-- 위와 같이 설정하면 fileNotFoundException이 발생한다. 왜냐하면 ContextLoaderListener는 
+  		 기본적으로 스프링 컨테이너를 구동하기 때문이다. WEB-INF안에 ApplicationContext.xml이 없어서 그런거라고
+  		 생각하면 될것같다. -->
+  	<!-- 그렇다고 ApplicationContext.xml을 이동하면 파일의 관리가 어려워진다.그럼 어떻게 해야할까?? -->
+  	<!-- Controller가 사용해야 할 Component들을 미리 메모리에 생성해야 하는데 리스너가 없다면 그게 불가능하다. -->
   	<filter>
   		<filter-name>encodingFilter</filter-name>
   		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>

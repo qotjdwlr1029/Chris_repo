@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,6 +19,13 @@ import chris.spring.web.board.impl.BoardDAO;
 //board라는 이름의 또 다른 Model객체가 있다면 그 객체에도 데이터를 저장한다.
 public class BoardController {
 
+	//Controller의 모든 메서드에 각각 BoardDAO를 직접 사용하고 있다. --> BoardDAO Command객체
+	//만일 BoardDAO의 내용이 수정이 된다면. Controller의 모든 메서드도 수정을 해야한다.
+	//이를 방지하기 위해서 BoardDAO에 대해 인터페이스를 선언하고 이를 구현하여 사용한다.
+	//다형성을 적용
+	@Autowired
+	private BoardService boardService;
+	
 	//@ModelAttribute는 파라미터 앞에 붙이면 해당 Command객체의 이름을 변경할 때 사용하는 것이고,
 	//View(JSP)에서 사용할 데이터를 설정하는 용도로 사용할수 있다.
 	
@@ -30,17 +38,17 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/insertBoard.do")
-	public String insertBoard(BoardVO vo, BoardDAO boardDao) {
+	public String insertBoard(BoardVO vo) {
 		System.out.println("글 등록 처리");
 		//1. 사용자 입력 정보 추출 : 커맨드 객체가 자동으로 처리해 줌.
 		//2. 데이터베이스 연동처리
 		//boardDAO객체도 VO와 동일하게 커맨드 객체를 사용해서 자동으로 매핑한다.
-		boardDao.insertBoard(vo);
+		boardService.insertBoard(vo);
 		return "getBoardList.do";//비즈니스 로직 종료후에 View경로를 리턴한다.
 	}
 	
 	@RequestMapping("/updateBoard.do")
-	public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDao) {
+	public String updateBoard(@ModelAttribute("board") BoardVO vo) {
 		System.out.println("글 수정 처리");
 		System.out.println("번호 : "+vo.getSeq());
 		System.out.println("제목 : " + vo.getTitle());
@@ -52,17 +60,17 @@ public class BoardController {
 		// 2. 데이터베이스 연동 처리
 		// 1번과 2번은 Command객체의 성질을 이용하여 해당 객체 안의 setter,메서드들의
 		// 기능을 사용해서 자동으로 처리가 된다.
-		boardDao.updateBoard(vo);
+		boardService.updateBoard(vo);
 		
 		//proc와 view가 같이 있는경우 do요청을 보내어 이동한다.
 		return "getBoardList.do";
 	}
 	
 	@RequestMapping("/deleteBoard.do")
-	public String deleteBoard(BoardVO vo, BoardDAO boardDao) {
+	public String deleteBoard(BoardVO vo) {
 		System.out.println("글 삭제 처리");
 
-		boardDao.deleteBoard(vo);
+		boardService.deleteBoard(vo);
 
 		//삭제 처리후 페이지 이동을 해야하는데 삭제하고 남은 글들을 받아서 
 		//목록을 보여주어야 하기 때문에 String으로 do요청을 보낸다.
@@ -71,20 +79,20 @@ public class BoardController {
 	
 	@RequestMapping("/getBoard.do")
 	//해당 메서드의 결과는 글의 상세페이지를 보여주어야 하기 때문에 ModelAndView를 리턴타입으로 지정한다.
-	public String getBoard(BoardVO vo, BoardDAO boardDao, Model model) {
+	public String getBoard(BoardVO vo, Model model) {
 		System.out.println("글 상세 보기 처리");
 		
 		//BoardVO, BoardDAO, ModelAndView객체는 Command객체로서 
 		//그 값들이 자동으로 저장이 된다.
 		
-		BoardVO board = boardDao.getBoard(vo);
+		BoardVO board = boardService.getBoard(vo);
 		
 		model.addAttribute("board",board);
 		return "getBoard.jsp";
 	}
 	
 	@RequestMapping("/getBoardList.do")
-	public String getBoardList(BoardVO vo, BoardDAO boardDao, Model model
+	public String getBoardList(BoardVO vo, Model model
 		/*@RequestParam(value="searchCondition",defaultValue="TITLE",required=false) String condition,
 		@RequestParam(value="searchKeyword",defaultValue="",required=false) String keyword*/) {
 		//Command객체에 없는 파라미터를 전달받고자 할때 @RequestMapping 어노테이션을 사용한다.
@@ -96,9 +104,14 @@ public class BoardController {
 		System.out.println("글 목록 검색 처리");
 		System.out.println("검색 조건 : " + vo.getSearchCondition());
 		System.out.println("검색 단어 : " + vo.getSearchKeyword());
+		
+		//null체크
+		if(vo.getSearchCondition()==null) vo.setSearchCondition("TITLE");
+		if(vo.getSearchKeyword()==null)vo.setSearchKeyword("");
+		
 		//SpringContainer가 지원하는 Command객체를 사용하여 불필요한 코드를 줄인다.
 		//(BoardVO, BoardDAO, ModelAndView가 해당)
-		List<BoardVO> boardList = boardDao.getBoardList(vo);
+		List<BoardVO> boardList = boardService.getBoardList(vo);
 		
 		//페이지를 보여주기 위해서는 ViewResolver를 사용해 보낼수 있도록
 		//ModelAndView객체를 사용한다.
